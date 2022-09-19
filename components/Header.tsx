@@ -16,7 +16,7 @@ function Header() {
       >
         <Link href="/">
           <div className="object-fill w-44">
-            <Image src={milanoText} alt="" />
+            <Image src={milanoText} alt="" className="fill-white" />
           </div>
         </Link>
         <div
@@ -34,7 +34,7 @@ function Header() {
             href="https://www.toneden.io/justinwaves/post/sun-will-rise"
           >
             <h3 className="text-black  bg-slate-200 py-1 rounded-full px-4 ">
-              listen
+              Community
             </h3>
           </a>
         </div>
