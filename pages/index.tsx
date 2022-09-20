@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import LandingSlider from "../components/LandingSlider";
 
 const Home: NextPage = () => {
   return (
@@ -12,9 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="">
-        <h1 className="text-3xl"> This works</h1>
-      </main>
+      <LandingSlider />
       <Footer />
     </div>
   );

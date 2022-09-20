@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-slate-200 flex flex-col w-screen absolute bottom-0">
+    <div className="bg-slate-200 flex flex-col w-screen relative bottom-0">
       <div>
         <div className=" bg-black flex flex-col">
           <div className="p-5 md:p-10 pt-20 flex flex-col md:flex-row justify-between ">
@@ -15,13 +15,13 @@ function Footer() {
                   <h1>test</h1>
                 </Link>
                 <div className="text-slate-300 ">
-                  <Link href="/about">
-                    <h2 className="hover:text-sky-300 cursor-pointer">About</h2>
+                  <Link href="/t">
+                    <h2 className="hover:text-red-600 cursor-pointer">About</h2>
                   </Link>
                   <h2>Contact</h2>
-                  <h2>Mixes</h2>
-                  <h2>Shows</h2>
-                  <h2>Shop</h2>
+                  <h2>Art</h2>
+                  <h2>Community</h2>
+                  <h2>Clothing</h2>
                 </div>
               </div>
               <Link href="/">
