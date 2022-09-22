@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import MilanoText from "../public/MILANO_logo.svg";
-import { color } from "@mui/system";
-import { dividerClasses } from "@mui/material";
+import { useSpring, animated, config } from "react-spring";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,10 +11,21 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const menuAnimation = useSpring({
+    config: config.molasses,
+
+    from: { opacity: 0, height: "0px" },
+    to: {
+      opacity: isMenuOpen ? 1 : 0,
+      height: isMenuOpen ? "100vh" : "0px",
+    },
+  });
+
   return isMenuOpen ? (
-    <div
+    <animated.div
+      style={menuAnimation}
       className=" flex fixed 
-    p-3  mx-auto max-w-7xl  bg-white w-screen h-screen first-letter z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50 z-15 transition-opacity duration-500 ease-in-out"
+    p-3  mx-auto max-w-7xl  bg-white w-screen  first-letter z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50 z-15"
     >
       <button
         className=" rounded-md border border-slate-600 p-2 absolute right-3 top-3"
@@ -40,7 +48,7 @@ function Header() {
           community
         </h1>
       </div>
-    </div>
+    </animated.div>
   ) : (
     <header
       className="  flex  justify-between fixed 
