@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "landing-bg": "url('/native-milano.jpg')",
+      },
+    },
   },
   plugins: [],
   important: true,

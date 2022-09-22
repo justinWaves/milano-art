@@ -10,14 +10,14 @@ import { dividerClasses } from "@mui/material";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openMenu = (e) => {
+  const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return isMenuOpen ? (
     <div
       className=" flex fixed 
-    p-3  mx-auto max-w-7xl  bg-white w-screen h-screen first-letter z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50 z-15"
+    p-3  mx-auto max-w-7xl  bg-white w-screen h-screen first-letter z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50 z-15 transition-opacity duration-500 ease-in-out"
     >
       <button
         className=" rounded-md border border-slate-600 p-2 absolute right-3 top-3"
@@ -26,9 +26,19 @@ function Header() {
         <CloseIcon fontSize="large" />
       </button>
       <div className="mx-auto my-auto">
-        <h1 className="text-5xl text-slate-900">art</h1>
-        <h1 className="text-5xl text-slate-900">about</h1>
-        <h1 className="text-5xl text-slate-900">community</h1>
+        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+          art
+        </h1>
+
+        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+          shop
+        </h1>
+        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+          about
+        </h1>
+        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+          community
+        </h1>
       </div>
     </div>
   ) : (

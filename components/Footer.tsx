@@ -18,7 +18,7 @@ function Footer() {
                   <Link href="/t">
                     <h2 className="hover:text-red-600 cursor-pointer">About</h2>
                   </Link>
-                  <h2>Contact</h2>
+                  <h2 className="hover:border-r-solid">Contact</h2>
                   <h2>Art</h2>
                   <h2>Community</h2>
                   <h2>Clothing</h2>
