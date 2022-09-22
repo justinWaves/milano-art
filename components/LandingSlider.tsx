@@ -5,9 +5,10 @@ import matt2 from "../public/native-milano.jpg";
 
 function LandingSlider() {
   return (
-    <div className=" w-screen landing-bg bg-cover bg-center">
-      <Image src={matt1} className="" />
-      <Image src={matt2} className="" />
+    <div className="  w-screen h-screen  ">
+      {/* <Image src={matt1} className="" />
+      <Image src={matt2} className="" /> */}
+      <Image src={matt2} layout="fill" objectFit="cover" priority />
     </div>
   );
 }

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "landing-bg": "url('/native-milano.jpg')",
+        "landing-bg": "url('/native-milano.jpg)",
       },
     },
   },

@@ -26,17 +26,17 @@ function Header() {
         <CloseIcon fontSize="large" />
       </button>
       <div className="mx-auto my-auto">
-        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+        <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
           art
         </h1>
 
-        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+        <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
           shop
         </h1>
-        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+        <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
           about
         </h1>
-        <h1 className="text-5xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer">
+        <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
           community
         </h1>
       </div>
