@@ -22,14 +22,16 @@ function Footer() {
                   <Link href="/t">
                     <h2 className="hover:text-red-600 cursor-pointer">art</h2>
                   </Link>
-                  <h2>shop</h2>
-                  <h2>about</h2>
-                  <h2>contact</h2>
-                  <h2>community</h2>
+                  <h2 className="hover:text-red-600 cursor-pointer">shop</h2>
+                  <h2 className="hover:text-red-600 cursor-pointer">about</h2>
+                  <h2 className="hover:text-red-600 cursor-pointer">contact</h2>
+                  <h2 className="hover:text-red-600 cursor-pointer">
+                    community
+                  </h2>
                 </div>
               </div>
               <Link href="/">
-                <MilanoHand className="fill-slate-200 w-20" />
+                <MilanoHand className="fill-slate-200 w-20 ml-5" />
               </Link>
             </div>
           </div>
