@@ -16,11 +16,11 @@ function Gallery() {
       <LightLang className="w-screen fill-slate-300" />
       <LightLang className="w-screen  fill-slate-300" />
 
-      <div className="flex flex-row absolute top-10 mx-10  gap-10">
-        <div className="w-2/3 shadow-xl ">
+      <div className="flex flex-col md:flex-row mx-auto absolute top-10 md:mx-5  gap-10">
+        <div className="w-screen md:w-2/3 shadow-xl">
           <Image src={milanoLion}></Image>
         </div>
-        <div className="w-1/3 bg-white bg-opacity-70  flex flex-col p-5 justify-center pt-10 rounded-xl">
+        <div className="w-5/6 mx-auto md:w-1/3 bg-white bg-opacity-70  flex flex-col  p-5 justify-center pt-10 rounded-xl">
           <h1 className="text-4xl">Milano Lion</h1>
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.

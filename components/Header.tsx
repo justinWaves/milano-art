@@ -3,14 +3,24 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MilanoText from "../public/milano-text.svg";
+import MilanoHand from "../public/milano-hand.svg";
 import { useSpring, animated, config } from "react-spring";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isHoveringOnMenuItem, setIsHoveringOnMenuItem] = useState(false);
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  //   const onMenuItemHover = () => {
+  //     setIsHoveringOnMenuItem(!isHoveringOnMenuItem);
+  //   };
+
+  //  const showHandOnHover = () => {
+
+  //  }
 
   const menuAnimation = useSpring({
     config: config.default,
@@ -45,6 +55,7 @@ function Header() {
                 art
               </h3>
             </Link>
+
             <Link href="/">
               <h3 className="cursor-pointer hover:animate-bounce hover:text-red-600">
                 shop
@@ -88,22 +99,36 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
             <CloseIcon fontSize="large" />
           </button>
           <div className="mx-auto my-auto">
-            <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
-              art
-            </h1>
-
-            <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
-              shop
-            </h1>
-            <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
-              about
-            </h1>
-            <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
-              contact
-            </h1>
-            <h1 className="text-6xl text-slate-900 hover:border-l-4 border-red-600 cursor-pointer pl-2">
-              community
-            </h1>
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+                art
+              </h1>
+            </div>
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+                shop
+              </h1>
+            </div>
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+                about
+              </h1>
+            </div>
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+                contact
+              </h1>
+            </div>
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-slate-600  cursor-pointer pl-2">
+                community
+              </h1>
+            </div>
           </div>
         </animated.div>
       ) : (
