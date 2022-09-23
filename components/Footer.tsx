@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import MilanoHand from "../public/milano-hand.svg";
+import MilanoText from "../public/milano-text.svg";
 
 function Footer() {
   return (
@@ -7,30 +9,32 @@ function Footer() {
       <div>
         <div className=" bg-black flex flex-col">
           <div className="p-5 md:p-10 pt-20 flex flex-col md:flex-row justify-between ">
-            <div className="flex flex-col "></div>
+            <div className="flex flex-col ">
+              <MilanoText className="fill-slate-200 w-44 mx-auto" />
+            </div>
             <hr className="mt-10 mb-10" />
             <div className=" flex flex-row justify-between ">
               <div>
-                <Link href="/">
-                  <h1>test</h1>
-                </Link>
+                {/* <Link href="/">
+                  <MilanoText className="fill-slate-200" />
+                </Link> */}
                 <div className="text-slate-300 ">
                   <Link href="/t">
-                    <h2 className="hover:text-red-600 cursor-pointer">About</h2>
+                    <h2 className="hover:text-red-600 cursor-pointer">art</h2>
                   </Link>
-                  <h2 className="hover:border-r-solid">Contact</h2>
-                  <h2>Art</h2>
-                  <h2>Community</h2>
-                  <h2>Clothing</h2>
+                  <h2>shop</h2>
+                  <h2>about</h2>
+                  <h2>contact</h2>
+                  <h2>community</h2>
                 </div>
               </div>
               <Link href="/">
-                <h1>test</h1>
+                <MilanoHand className="fill-slate-200 w-20" />
               </Link>
             </div>
           </div>
         </div>
-        <div className=" px-2 p-2  flex flex-row justify-between bg-black text-slate-600 text-xs">
+        <div className=" px-2 p-2  flex flex-row justify-between bg-black text-slate-700 text-xs">
           <p>
             Design and build by{" "}
             <a
