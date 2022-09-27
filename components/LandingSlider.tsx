@@ -11,7 +11,7 @@ function LandingSlider() {
       {/* <Image src={MattHand} className="" /> */}
 
       <div className="mx-auto w-screen md:w-1/3 pt-20">
-        <Image src={matt3} />
+        <Image src={matt3} className="shadow-md" />
       </div>
     </div>
   );
