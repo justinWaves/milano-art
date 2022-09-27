@@ -51,22 +51,22 @@ function Header() {
      space-x-5 text-slate-900"
           >
             <Link href="/">
-              <h3 className="cursor-pointer hover:animate-bounce hover:text-red-600">
+              <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
                 art
               </h3>
             </Link>
 
             <Link href="/">
-              <h3 className="cursor-pointer hover:animate-bounce hover:text-red-600">
+              <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
                 shop
               </h3>
             </Link>
             <Link href="/">
-              <h3 className="cursor-pointer hover:animate-bounce hover:text-red-600">
+              <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
                 about
               </h3>
             </Link>
-            <h3 className="cursor-pointer hover:animate-bounce hover:text-red-600">
+            <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
               contact
             </h3>
 

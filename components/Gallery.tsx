@@ -1,26 +1,29 @@
 import Image from "next/image";
 import React from "react";
-import LightLang from "../public/milano-light-lang.svg";
+import LightLangInverse from "../public/milano-lightlang-inverse.svg";
 import milanoLion from "../public/milano-lion.jpg";
 
 function Gallery() {
   return (
     <div
-      // className="w-screen bg-gradient-to-r
-      // from-blue-400
-      // to-orange-500
-      // via-purple-500
-      // animate-gradient-xy"
-      className="bg-slate-200 relative p-10"
+      className="w-screen bg-gradient-to-r
+      from-blue-400
+      to-orange-500
+      via-purple-500
+      animate-gradient-xy
+      shadow-lg relative"
     >
-      {/* <LightLang className="w-screen fill-black" />
-      <LightLang className="w-screen  fill-black" /> */}
+      <div className="bg-black w-screen mx-auto ">
+        <h1 className="text-6xl text-white text-center p-5">Gallery</h1>
+      </div>
+      <LightLangInverse className="w-screen fill-black" />
+      <LightLangInverse className="w-screen fill-black" />
 
-      <div className="flex flex-col md:flex-row mx-auto  md:mx-5  gap-10">
+      <div className="flex flex-col md:flex-row mx-auto  md:mx-5  absolute top-40">
         <div className="w-screen md:w-2/3 shadow-xl">
           <Image src={milanoLion}></Image>
         </div>
-        <div className="w-5/6 mx-auto md:w-1/3 bg-white bg-opacity-70  flex flex-col  p-5 justify-center pt-10 rounded-xl">
+        <div className="w-5/6 mx-auto md:w-1/4 bg-filter backdrop-blur-xl text-slate-300 bg-opacity-50  flex flex-col  p-5 justify-center  rounded-xl">
           <h1 className="text-4xl">Milano Lion</h1>
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.

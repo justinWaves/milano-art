@@ -17,7 +17,7 @@ index = Math.floor(Math.random() * imageList.length);
 function Footer() {
   return (
     <div className=" mt-10">
-      <div className="w-2/3 h-auto mx-auto -mb-20  ">
+      <div className="w-screen md:w-2/3  mx-auto -mb-20 p-5 ">
         <Image src={imageList[index]}></Image>
       </div>
       <MilanoWave className="" />

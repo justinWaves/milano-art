@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import MattHand from "../public/milano-hand.svg";
 import matt2 from "../public/native-milano.jpg";
+import matt3 from "../public/milano-tyson.png";
 
 function LandingSlider() {
   return (
@@ -9,7 +10,9 @@ function LandingSlider() {
       {/* <MattHand className="w-1/2 mx-auto" /> */}
       {/* <Image src={MattHand} className="" /> */}
 
-      {/* <Image src={matt2} layout="fill" objectFit="cover" priority /> */}
+      <div className="mx-auto w-screen md:w-1/3 pt-20">
+        <Image src={matt3} />
+      </div>
     </div>
   );
 }
