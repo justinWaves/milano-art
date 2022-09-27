@@ -100,32 +100,32 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
           </button>
           <div className="mx-auto my-auto">
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
                 art
               </h1>
             </div>
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
                 shop
               </h1>
             </div>
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
                 about
               </h1>
             </div>
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-slate-600 cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
                 contact
               </h1>
             </div>
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-600 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-slate-600  cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-900 hover:text-red-700  cursor-pointer pl-2">
                 community
               </h1>
             </div>

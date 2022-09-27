@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import matt1 from "../public/13007201_10209269190713285_601260331351754684_n.jpg";
+import MattHand from "../public/milano-hand.svg";
 import matt2 from "../public/native-milano.jpg";
 
 function LandingSlider() {
   return (
     <div className="  w-screen h-screen  ">
-      {/* <Image src={matt1} className="" />
-      <Image src={matt2} className="" /> */}
-      <Image src={matt2} layout="fill" objectFit="cover" priority />
+      {/* <MattHand className="w-1/2 mx-auto" /> */}
+      {/* <Image src={MattHand} className="" /> */}
+
+      {/* <Image src={matt2} layout="fill" objectFit="cover" priority /> */}
     </div>
   );
 }

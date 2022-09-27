@@ -6,17 +6,17 @@ import milanoLion from "../public/milano-lion.jpg";
 function Gallery() {
   return (
     <div
-      //   className="w-screen bg-gradient-to-r
+      // className="w-screen bg-gradient-to-r
       // from-blue-400
       // to-orange-500
       // via-purple-500
       // animate-gradient-xy"
-      className="bg-slate-200 relative "
+      className="bg-slate-200 relative p-10"
     >
-      <LightLang className="w-screen fill-slate-300" />
-      <LightLang className="w-screen  fill-slate-300" />
+      {/* <LightLang className="w-screen fill-black" />
+      <LightLang className="w-screen  fill-black" /> */}
 
-      <div className="flex flex-col md:flex-row mx-auto absolute top-10 md:mx-5  gap-10">
+      <div className="flex flex-col md:flex-row mx-auto  md:mx-5  gap-10">
         <div className="w-screen md:w-2/3 shadow-xl">
           <Image src={milanoLion}></Image>
         </div>
