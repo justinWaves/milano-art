@@ -34,7 +34,7 @@ function Header() {
   return (
     <>
       <header
-        className="  flex  justify-between fixed 
+        className="  flex  justify-between fixed px-3 md:rounded-md
  p-2  mx-auto max-w-7xl  bg-white w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50"
       >
         <div
@@ -80,7 +80,10 @@ function Header() {
           className=" rounded-md border border-slate-600 p-2"
           onClick={openMenu}
         >
-          <MenuIcon fontSize="large" />
+          <MenuIcon
+            fontSize="large"
+            className="hover:fill-red-600 hover:animate-pulse"
+          />
         </button>
       </header>
 

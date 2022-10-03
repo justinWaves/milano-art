@@ -4,12 +4,12 @@ import Image from "next/image";
 import MilanoHand from "../public/milano-hand.svg";
 import MilanoText from "../public/milano-text.svg";
 import MilanoWave from "../public/milano-wave-divider.svg";
-import MilanoHandMan from "../public/milano-handman.png";
+// import MilanoHandMan from "../public/milano-handman.png";
 import MilanoPeople from "../public/milano-people.png";
 import MilanoSFVibe from "../public/milano-SF-vibe.png";
 // import MilanoFlowerHead from "../public/milano-flower-head.png";
 
-const imageList = [MilanoHandMan, MilanoPeople, MilanoSFVibe];
+const imageList = [MilanoPeople, MilanoSFVibe];
 let index = 0;
 
 index = Math.floor(Math.random() * imageList.length);
@@ -49,7 +49,7 @@ function Footer() {
                   </div>
                 </div>
                 <Link href="/">
-                  <MilanoHand className="fill-slate-200 w-20 ml-5" />
+                  <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
                 </Link>
               </div>
             </div>
