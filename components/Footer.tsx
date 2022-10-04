@@ -17,7 +17,7 @@ index = Math.floor(Math.random() * imageList.length);
 function Footer() {
   return (
     <div className=" mt-10">
-      <div className="w-screen md:w-2/3  mx-auto -mb-20 p-5 bg-white">
+      <div className="w-screen md:w-2/3  mx-auto -mb-10 p-5 bg-white">
         <Image src={imageList[index]}></Image>
       </div>
       <MilanoWave className="" />
@@ -35,7 +35,7 @@ function Footer() {
                   <MilanoText className="fill-slate-200" />
                 </Link> */}
                   <div className="text-slate-300 ">
-                    <Link href="/t">
+                    <Link href="/">
                       <h2 className="hover:text-red-600 cursor-pointer">art</h2>
                     </Link>
                     <h2 className="hover:text-red-600 cursor-pointer">shop</h2>
@@ -49,7 +49,9 @@ function Footer() {
                   </div>
                 </div>
                 <Link href="/">
-                  <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
+                  <a>
+                    <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
+                  </a>
                 </Link>
               </div>
             </div>
