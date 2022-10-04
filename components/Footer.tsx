@@ -4,7 +4,7 @@ import Image from "next/image";
 import MilanoHand from "../public/milano-hand.svg";
 import MilanoText from "../public/milano-text.svg";
 import MilanoWave from "../public/milano-wave-divider.svg";
-// import MilanoHandMan from "../public/milano-handman.png";
+
 import MilanoPeople from "../public/milano-people.png";
 import MilanoSFVibe from "../public/milano-SF-vibe.png";
 // import MilanoFlowerHead from "../public/milano-flower-head.png";
@@ -17,7 +17,7 @@ index = Math.floor(Math.random() * imageList.length);
 function Footer() {
   return (
     <div className=" mt-10">
-      <div className="w-screen md:w-2/3  mx-auto -mb-20 p-5 ">
+      <div className="w-screen md:w-2/3  mx-auto -mb-20 p-5 bg-white">
         <Image src={imageList[index]}></Image>
       </div>
       <MilanoWave className="" />

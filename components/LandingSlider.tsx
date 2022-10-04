@@ -6,12 +6,12 @@ import matt3 from "../public/milano-tyson.png";
 
 function LandingSlider() {
   return (
-    <div className="  w-screen h-screen  ">
+    <div className="  w-screen h-screen overflow-hidden ">
       {/* <MattHand className="w-1/2 mx-auto" /> */}
       {/* <Image src={MattHand} className="" /> */}
 
       <div className="mx-auto w-screen md:w-1/3 pt-20">
-        <Image src={matt3} className="shadow-md" />
+        <Image src={matt3} className="shadow-md cursor-pointer" />
       </div>
     </div>
   );
