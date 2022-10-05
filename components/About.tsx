@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
+import MilanoHand from "../public/milano-hand.svg";
 
 function About() {
   return (
@@ -38,8 +39,8 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="absolute bottom-10 text-2xl animate-bounce">
-            <ArrowCircleDownIcon className="text-6xl animate-pulse text-slate-700" />
+          <div className="absolute bottom-5 text-2xl animate-bounce">
+            <MilanoHand className="w-10 animate-pulse text-slate-700" />
           </div>
         </ParallaxLayer>
       </Parallax>

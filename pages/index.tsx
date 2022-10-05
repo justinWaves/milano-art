@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Header />
       <LandingSlider />
       <About />
-      <Gallery galleryItems={} />
+      <Gallery />
       <Footer />
     </div>
   );
