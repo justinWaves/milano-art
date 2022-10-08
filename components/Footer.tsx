@@ -39,7 +39,7 @@ function Footer() {
                       <h2 className="hover:text-red-600 cursor-pointer">art</h2>
                     </Link>
                     <h2 className="hover:text-red-600 cursor-pointer">shop</h2>
-                    <h2 className="hover:text-red-600 cursor-pointer">about</h2>
+                    {/* <h2 className="hover:text-red-600 cursor-pointer">about</h2> */}
                     <h2 className="hover:text-red-600 cursor-pointer">
                       contact
                     </h2>

@@ -8,19 +8,10 @@ import { useSpring, animated, config } from "react-spring";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [isHoveringOnMenuItem, setIsHoveringOnMenuItem] = useState(false);
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  //   const onMenuItemHover = () => {
-  //     setIsHoveringOnMenuItem(!isHoveringOnMenuItem);
-  //   };
-
-  //  const showHandOnHover = () => {
-
-  //  }
 
   const menuAnimation = useSpring({
     config: config.default,
@@ -61,11 +52,11 @@ function Header() {
                 shop
               </h3>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
                 about
               </h3>
-            </Link>
+            </Link> */}
             <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
               contact
             </h3>
@@ -114,12 +105,12 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
                 shop
               </h1>
             </div>
-            <div className="flex flex-row group">
+            {/* <div className="flex flex-row group">
               <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
               <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
                 about
               </h1>
-            </div>
+            </div> */}
             <div className="flex flex-row group">
               <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
               <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
