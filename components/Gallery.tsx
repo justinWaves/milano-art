@@ -42,8 +42,8 @@ function Gallery({ galleryItems }: GalleryProps) {
                     <img src={urlFor(item.mainImage).url()!} className="" />
 
                     <div className="group md:flex lg:hidden flex-col mx-auto cursor-pointer hidden text-center mb-5">
-                      <MilanoHand className="w-20 group-hover:fill-yellow-100 mx-auto hover:animate-pulse hover:animate-none fill-red-700 mt-5" />
-                      <p className="text-xs mt-3 group-hover:text-yellow-100 text-red-600 hover:animate-pulse ">
+                      <MilanoHand className="w-20 group-hover:fill-slate-700 mx-auto hover:animate-pulse hover:animate-none fill-red-700 mt-5" />
+                      <p className="text-xs mt-3 group-hover:text-slate-700 text-red-600 hover:animate-pulse ">
                         interested in purchasing?
                       </p>
                     </div>
@@ -52,8 +52,8 @@ function Gallery({ galleryItems }: GalleryProps) {
                   {/* text container*/}
                   <div className=" w-full md:w-1/2 p-10 ">
                     <div className="group lg:flex flex-col mx-auto cursor-pointer hidden text-center mb-10 ">
-                      <MilanoHand className="w-20  group-hover:fill-yellow-100 mx-auto animate-pulse hover:animate-none fill-red-700" />
-                      <p className="text-sm mt-3 text-red-600 group-hover:text-yellow-100  ">
+                      <MilanoHand className="w-20  group-hover:fill-slate-700 mx-auto animate-pulse hover:animate-none fill-red-700" />
+                      <p className="text-sm mt-3 text-red-600 group-hover:text-slate-700  ">
                         interested in purchasing?
                       </p>
                     </div>
@@ -100,8 +100,8 @@ function Gallery({ galleryItems }: GalleryProps) {
 
                 <div className="w-5/6  mx-auto z-1 md:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-70  flex md:hidden flex-col md:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  md:rounded-xl relative -top-2 shadow-md">
                   <div className="group md:hidden flex-col mx-auto cursor-pointer flex ">
-                    <MilanoHand className="w-20 fill-red-600 mx-auto animate-pulse group-hover:animate-none group-hover:fill-yellow-100" />
-                    <p className="text-xs mt-3 text-red-600 group-hover:text-yellow-100">
+                    <MilanoHand className="w-20 fill-red-600 mx-auto animate-pulse group-hover:animate-none group-hover:fill-slate-700" />
+                    <p className="text-xs mt-3 text-red-600 group-hover:text-slate-700">
                       interested in purchasing?
                     </p>
                   </div>
