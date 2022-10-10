@@ -25,7 +25,7 @@ function Gallery({ galleryItems }: GalleryProps) {
       animate-gradient-xy
        relative"
       >
-        <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill md:bg-cover bg-repeat-y bg-center fill-black">
+        <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill lg:bg-cover bg-repeat-y bg-center fill-black">
           <div className="bg-black w-screen mx-auto  ">
             <h1 className="text-9xl text-slate-200 font-bold text-center pt-60 pb-24 animate-pulse ">
               gallery
@@ -36,12 +36,16 @@ function Gallery({ galleryItems }: GalleryProps) {
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
             {galleryItems.map((item) => (
-              <div className="flex flex-col z-4 md:flex-col mx-auto  md:mx-5 mt-20 ">
-                <div className="relative w-5/6  mx-auto z-1 md:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-900 bg-opacity-80  flex flex-col md:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl   md:rounded-2xl">
-                  <div className="w-screen md:w-1/2 hidden md:flex md:justify-between md:flex-col md:relative xl:-top-20 md:top-1/2 z-2 ">
-                    <img src={urlFor(item.mainImage).url()!} className="" />
+              <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20 ">
+                <div className="relative w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-900 bg-opacity-80  flex flex-col lg:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl   lg:rounded-2xl">
+                  {/* Image desktop*/}
+                  <div className="w-screen lg:w-1/2 hidden lg:flex lg:justify-between lg:flex-col md:relative xl:-top-20 md:top-1/2 z-2 ">
+                    <img
+                      src={urlFor(item.mainImage).url()!}
+                      className=" cursor-pointer my-auto"
+                    />
 
-                    <div className="group md:flex lg:hidden flex-col mx-auto cursor-pointer hidden text-center mb-5">
+                    <div className="group lg:hidden flex-col mx-auto cursor-pointer hidden text-center mb-5">
                       <MilanoHand className="w-20 group-hover:fill-slate-700 mx-auto hover:animate-pulse hover:animate-none fill-red-700 mt-5" />
                       <p className="text-xs mt-3 group-hover:text-slate-700 text-red-600 hover:animate-pulse ">
                         interested in purchasing?
@@ -50,7 +54,7 @@ function Gallery({ galleryItems }: GalleryProps) {
                   </div>
 
                   {/* text container*/}
-                  <div className=" w-full md:w-1/2 p-10 ">
+                  <div className=" w-full lg:w-1/2 p-10 ">
                     <div className="group lg:flex flex-col mx-auto cursor-pointer hidden text-center mb-10 ">
                       <MilanoHand className="w-20  group-hover:fill-slate-700 mx-auto animate-pulse hover:animate-none fill-red-700" />
                       <p className="text-sm mt-3 text-red-600 group-hover:text-slate-700  ">
@@ -94,12 +98,15 @@ function Gallery({ galleryItems }: GalleryProps) {
                   </div>
                 </div>
                 {/* image container mobile */}
-                <div className="w-screen  md:hidden z-2 ">
-                  <img src={urlFor(item.mainImage).url()!} className="" />
+                <div className="w-screen lg:hidden z-2">
+                  <img
+                    src={urlFor(item.mainImage).url()!}
+                    className="mx-auto shadow-lg cursor-pointer "
+                  />
                 </div>
-
-                <div className="w-5/6  mx-auto z-1 md:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-70  flex md:hidden flex-col md:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  md:rounded-xl relative -top-2 shadow-md">
-                  <div className="group md:hidden flex-col mx-auto cursor-pointer flex ">
+                {/* purchase container mobile */}
+                <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-70  flex lg:hidden flex-col lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-2 shadow-md">
+                  <div className="group lg:hidden flex-col mx-auto cursor-pointer flex ">
                     <MilanoHand className="w-20 fill-red-600 mx-auto animate-pulse group-hover:animate-none group-hover:fill-slate-700" />
                     <p className="text-xs mt-3 text-red-600 group-hover:text-slate-700">
                       interested in purchasing?
@@ -109,8 +116,6 @@ function Gallery({ galleryItems }: GalleryProps) {
               </div>
             ))}
           </div>
-
-          {/* gallery item container */}
         </div>
         <MilanoWave2 className=" relative fill-white bottom-0 -mt-64" />
       </div>
