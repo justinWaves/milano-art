@@ -13,7 +13,6 @@ interface GalleryProps {
 }
 
 function Gallery({ galleryItems }: GalleryProps) {
-  console.log(galleryItems);
   return (
     <>
       <div
@@ -27,11 +26,11 @@ function Gallery({ galleryItems }: GalleryProps) {
       >
         <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill lg:bg-cover bg-repeat-y bg-center fill-black">
           <div className="bg-black w-screen mx-auto  ">
-            <h1 className="text-9xl text-slate-200 font-bold text-center pt-60 pb-24 animate-pulse ">
+            <h1 className="text-5xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-10 lg:pb-24 animate-pulse ">
               gallery
             </h1>
           </div>
-          <MilanoWave3 className="w-screen" />
+          <MilanoWave3 className="w-screen shadow-lg" />
 
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
@@ -54,7 +53,7 @@ function Gallery({ galleryItems }: GalleryProps) {
                   </div>
 
                   {/* text container*/}
-                  <div className=" w-full lg:w-1/2 p-10 ">
+                  <div className=" w-full lg:w-1/2 px-3 pt-3  lg:py-5 lg:px-5 ">
                     <div className="group lg:flex flex-col mx-auto cursor-pointer hidden text-center mb-10 ">
                       <MilanoHand className="w-20  group-hover:fill-slate-700 mx-auto animate-pulse hover:animate-none fill-red-700" />
                       <p className="text-sm mt-3 text-red-600 group-hover:text-slate-700  ">

@@ -10,7 +10,7 @@ function About() {
         <ParallaxLayer
           offset={1}
           speed={2}
-          className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover bg-fixed w-screen text-white flex justify-center"
+          className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
           <div className=" absolute bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 md:bg-opacity-0 p-5 rounded-lg">
             <h1 className="text-4xl">
@@ -40,7 +40,7 @@ function About() {
           }}
         >
           <div className="absolute bottom-5 text-2xl animate-bounce">
-            <MilanoHand className="w-10 animate-pulse text-slate-700" />
+            <MilanoHand className="w-10 animate-pulse text-slate-400 lg:text-slate-700" />
           </div>
         </ParallaxLayer>
       </Parallax>
