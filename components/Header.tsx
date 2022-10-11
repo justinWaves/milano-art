@@ -25,7 +25,7 @@ function Header() {
   return (
     <>
       <header
-        className="  flex  justify-between fixed px-3 md:rounded-md
+        className="flex justify-between fixed px-2 md:rounded-md
  p-2  mx-auto max-w-7xl  bg-white w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50"
       >
         <div
@@ -87,7 +87,7 @@ function Header() {
 p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-blur-xl bg-opacity-50 z-15"
         >
           <button
-            className=" rounded-md border border-slate-600 p-2 absolute right-2 top-2"
+            className=" rounded-md border border-slate-600 hover:text-red-700 p-2 absolute right-2 top-2"
             onClick={openMenu}
           >
             <CloseIcon fontSize="large" />

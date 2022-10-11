@@ -26,17 +26,17 @@ function Gallery({ galleryItems }: GalleryProps) {
       >
         <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill lg:bg-cover bg-repeat-y bg-center fill-black">
           <div className="bg-black w-screen mx-auto  ">
-            <h1 className="text-5xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-10 lg:pb-24 animate-pulse ">
+            <h1 className="text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-10 lg:pb-24 animate-pulse ">
               gallery
             </h1>
           </div>
-          <MilanoWave3 className="w-screen shadow-lg" />
+          <MilanoWave3 className="w-screen " />
 
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
             {galleryItems.map((item) => (
               <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20 ">
-                <div className="relative w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-900 bg-opacity-80  flex flex-col lg:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl   lg:rounded-2xl">
+                <div className="relative w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-900 bg-opacity-90 flex flex-col lg:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl lg:rounded-2xl">
                   {/* Image desktop*/}
                   <div className="w-screen lg:w-1/2 hidden lg:flex lg:justify-between lg:flex-col md:relative xl:-top-20 md:top-1/2 z-2 ">
                     <img
@@ -104,7 +104,7 @@ function Gallery({ galleryItems }: GalleryProps) {
                   />
                 </div>
                 {/* purchase container mobile */}
-                <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-70  flex lg:hidden flex-col lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-2 shadow-md">
+                <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-90  flex lg:hidden flex-col lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-2 shadow-md">
                   <div className="group lg:hidden flex-col mx-auto cursor-pointer flex ">
                     <MilanoHand className="w-20 fill-red-600 mx-auto animate-pulse group-hover:animate-none group-hover:fill-slate-700" />
                     <p className="text-xs mt-3 text-red-600 group-hover:text-slate-700">

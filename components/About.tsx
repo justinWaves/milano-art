@@ -12,12 +12,12 @@ function About() {
           speed={2}
           className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
-          <div className=" absolute bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 md:bg-opacity-0 p-5 rounded-lg">
+          <div className=" my-auto lg:absolute lg:bottom-20 mx-auto lg:left-20 w-5/6 lg:w-1/2 bg-slate-800 bg-opacity-50 lg:bg-opacity-0 p-5 rounded-lg h-fit">
             <h1 className="text-4xl">
               Meet Matt Milanio, one of San Francisco's rising contemporary
               artists
             </h1>
-            <p>
+            <p className="mt-3">
               Its rare today that an artist rises amongst the ranks of the
               greats. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
