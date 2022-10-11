@@ -24,13 +24,13 @@ function Gallery({ galleryItems }: GalleryProps) {
       animate-gradient-xy
        relative"
       >
-        <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill lg:bg-cover bg-repeat-y bg-center fill-black">
-          <div className="bg-black w-screen mx-auto  ">
-            <h1 className="text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-20 lg:pb-24 animate-pulse ">
+        <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill bg-repeat-y bg-center fill-slate-300">
+          <div className="bg-slate-300 w-screen mx-auto  ">
+            <h1 className="text-6xl lg:text-9xl text-slate-900 font-bold text-center pt-20 lg:pt-60 pb-20 lg:pb-24  border-l-4 border-slate-900 ">
               gallery
             </h1>
           </div>
-          {/* <MilanoWave3 className="w-screen " /> */}
+          <MilanoWave3 className="w-screen " />
 
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
