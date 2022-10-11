@@ -6,13 +6,15 @@ import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import LandingSlider from "../components/LandingSlider";
-import { GalleryItem } from "../typings";
+import { GalleryItem, MainPageImage } from "../typings";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
+  mainImage: [MainPageImage];
 }
 
-const Home = ({ galleryItems }: GalleryProps) => {
+const Home = ({ galleryItems, mainImage }: GalleryProps) => {
+  console.log(mainImage);
   return (
     <div className="">
       <Head>
@@ -20,7 +22,7 @@ const Home = ({ galleryItems }: GalleryProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <LandingSlider />
+      <LandingSlider mainImage={mainImage} />
       <About />
       <Gallery galleryItems={galleryItems} />
       <Footer />
@@ -40,11 +42,20 @@ export const getServerSideProps = async () => {
   }
   `;
 
+  const mainImageQuery = `*[_type == "mainPageImage"]{
+    title,
+ mainImage, 
+caption
+  }
+  `;
+
+  const mainImage = await sanityClient.fetch(mainImageQuery);
   const galleryItems = await sanityClient.fetch(query);
 
   return {
     props: {
       galleryItems,
+      mainImage,
     },
   };
 };

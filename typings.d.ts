@@ -9,3 +9,11 @@ export interface GalleryItem {
     };
     body: object[];
 }
+
+export interface MainPageImage {
+    title: string;
+    mainImage: {  asset: {
+        url: string;
+    }}
+    caption: object[];
+}

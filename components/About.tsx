@@ -40,7 +40,7 @@ function About() {
           }}
         >
           <div className="absolute bottom-5 text-2xl animate-bounce">
-            <MilanoHand className="w-10 animate-pulse text-slate-400 lg:text-slate-700" />
+            <MilanoHand className="w-10 animate-pulse fill-slate-200 md:fill-slate-700 " />
           </div>
         </ParallaxLayer>
       </Parallax>

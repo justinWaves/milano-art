@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { sanityClient, urlFor } from "../sanity";
+import { urlFor } from "../sanity";
 import MilanoWave3 from "../public/milano-waves-3.svg";
 import milanoLion from "../public/milano-lion.jpg";
 import MilanoHand from "../public/milano-hand.svg";
@@ -26,11 +26,11 @@ function Gallery({ galleryItems }: GalleryProps) {
       >
         <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill lg:bg-cover bg-repeat-y bg-center fill-black">
           <div className="bg-black w-screen mx-auto  ">
-            <h1 className="text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-10 lg:pb-24 animate-pulse ">
+            <h1 className="text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-20 lg:pt-60 pb-20 lg:pb-24 animate-pulse ">
               gallery
             </h1>
           </div>
-          <MilanoWave3 className="w-screen " />
+          {/* <MilanoWave3 className="w-screen " /> */}
 
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
@@ -65,7 +65,7 @@ function Gallery({ galleryItems }: GalleryProps) {
                     <p className="text-slate-500 text-xs">
                       Posted on {new Date(item._createdAt).toLocaleString()}
                     </p>
-                    <div className="mt-5">
+                    <div className="mt-5 overflow-hidden">
                       <PortableText
                         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
                         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
