@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import MilanoHand from "../public/milano-hand.svg";
 import MilanoText from "../public/milano-text.svg";
-import MilanoWave from "../public/milano-wave-divider.svg";
+import FooterWave from "../public/footer-wave.svg";
 
 import MilanoPeople from "../public/milano-people.png";
 import MilanoSFVibe from "../public/milano-SF-vibe.png";
@@ -20,7 +20,7 @@ function Footer() {
       <div className="w-screen md:w-2/3  mx-auto -mb-10 p-5 bg-white max-w-xl">
         <Image src={imageList[index]}></Image>
       </div>
-      <MilanoWave className="" />
+      <FooterWave className="" />
       <div className="bg-slate-200 flex flex-col w-screen relative bottom-0">
         <div>
           <div className=" bg-black flex flex-col">

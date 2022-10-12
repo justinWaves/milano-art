@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
 import About from "../components/About";
@@ -7,6 +6,7 @@ import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import LandingSlider from "../components/LandingSlider";
 import { GalleryItem, MainPageImage } from "../typings";
+import ContactScreen from "../components/ContactScreen";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -18,9 +18,10 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
   return (
     <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Matt Milano Art</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ContactScreen />
       <Header />
       <LandingSlider mainImage={mainImage} />
       <About />

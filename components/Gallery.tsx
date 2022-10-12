@@ -4,9 +4,10 @@ import { urlFor } from "../sanity";
 import MilanoWave3 from "../public/milano-waves-3.svg";
 import milanoLion from "../public/milano-lion.jpg";
 import MilanoHand from "../public/milano-hand.svg";
-import MilanoWave2 from "../public/milano-wave-2.svg";
+import MilanoWave2 from "../public/wave-divider.svg";
 import { GalleryItem } from "../typings";
 import PortableText from "react-portable-text";
+import HandButton from "./HandButton";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -24,13 +25,14 @@ function Gallery({ galleryItems }: GalleryProps) {
       animate-gradient-xy
        relative"
       >
-        <div className=" w-screen bg-[url('/milano-lightlang-inverse.svg')] bg-fill bg-repeat-y bg-center fill-slate-300">
-          <div className="bg-slate-300 w-screen mx-auto  ">
-            <h1 className="text-6xl lg:text-9xl text-slate-900 font-bold text-center pt-20 lg:pt-60 pb-20 lg:pb-24  border-l-4 border-slate-900 ">
+        <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center">
+          {/* <div className="w-screen h-20 bg-black  bg-opacity-50  bg-filter backdrop-blur-lg  "></div> */}
+          <div className="bg-black  bg-opacity-50 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10 ">
+            <h1 className="opacity-100 text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-10 lg:pt-40 pb-10 lg:pb-5 ">
               gallery
             </h1>
           </div>
-          <MilanoWave3 className="w-screen " />
+          {/* <MilanoWave3 className="w-screen " /> */}
 
           <div className="mt-20 pb-72">
             {/* Map of Gallery Items */}
@@ -44,21 +46,15 @@ function Gallery({ galleryItems }: GalleryProps) {
                       className=" cursor-pointer my-auto"
                     />
 
-                    <div className="group lg:hidden flex-col mx-auto cursor-pointer hidden text-center mb-5">
-                      <MilanoHand className="w-20 group-hover:fill-slate-700 mx-auto hover:animate-pulse hover:animate-none fill-red-700 mt-5" />
-                      <p className="text-xs mt-3 group-hover:text-slate-700 text-red-600 hover:animate-pulse ">
-                        interested in purchasing?
-                      </p>
-                    </div>
+                    {/* <button className=" lg:hidden mx-auto">
+                      <HandButton />
+                    </button> */}
                   </div>
 
                   {/* text container*/}
-                  <div className=" w-full lg:w-1/2 px-3 pt-3  lg:py-5 lg:px-5 ">
-                    <div className="group lg:flex flex-col mx-auto cursor-pointer hidden text-center mb-10 ">
-                      <MilanoHand className="w-20  group-hover:fill-slate-700 mx-auto animate-pulse hover:animate-none fill-red-700" />
-                      <p className="text-sm mt-3 text-red-600 group-hover:text-slate-700  ">
-                        interested in purchasing?
-                      </p>
+                  <div className=" w-full lg:w-1/2 px-3 pt-3  lg:py-5 lg:px-5 flex flex-col justify-center">
+                    <div className="lg:flex  hidden mb-10 mx-auto">
+                      <HandButton />
                     </div>
 
                     <h1 className="text-4xl  font-bold">{item.title}</h1>
@@ -104,19 +100,16 @@ function Gallery({ galleryItems }: GalleryProps) {
                   />
                 </div>
                 {/* purchase container mobile */}
-                <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-90  flex lg:hidden flex-col lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-2 shadow-md">
-                  <div className="group lg:hidden flex-col mx-auto cursor-pointer flex ">
-                    <MilanoHand className="w-20 fill-red-600 mx-auto animate-pulse group-hover:animate-none group-hover:fill-slate-700" />
-                    <p className="text-xs mt-3 text-red-600 group-hover:text-slate-700">
-                      interested in purchasing?
-                    </p>
+                <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-90  flex lg:hidden  lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-0 shadow-md">
+                  <div className="lg:hidden mx-auto">
+                    <HandButton />
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <MilanoWave2 className=" relative fill-white bottom-0 -mt-64" />
+        {/* <MilanoWave2 className=" relative fill-white bottom-0 -mt-64" /> */}
       </div>
     </>
   );
