@@ -2,10 +2,13 @@ import React from "react";
 import MilanoHand from "../public/milano-hand.svg";
 import CloseIcon from "@mui/icons-material/Close";
 
-function ContactScreen() {
+function ContactScreen({ handleClose }: any) {
   return (
     <div className="w-screen h-screen backdrop-blur-lg bg-opacity-60 bg-black z-20 fixed scroll-smooth">
-      <button className=" rounded-md border border-slate-100 hover:border-red-500 text-white hover:text-red-500 p-2 absolute right-2 top-2">
+      <button
+        onClick={() => handleClose()}
+        className=" rounded-md border border-slate-100 hover:border-red-500 text-white hover:text-red-500 p-2 absolute right-2 top-2"
+      >
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-between text-center h-screen">

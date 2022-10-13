@@ -17,8 +17,12 @@ interface GalleryProps {
 const Home = ({ galleryItems, mainImage }: GalleryProps) => {
   const [isContactScreenOpen, setIsContactScreenOpen] = useState(false);
 
-  const openContactMenu = (cb: boolean) => {
-    setIsContactScreenOpen(cb);
+  const openContactMenu = () => {
+    setIsContactScreenOpen(!isContactScreenOpen);
+  };
+
+  const handleClose = () => {
+    setIsContactScreenOpen(false);
   };
 
   return (
@@ -28,7 +32,7 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isContactScreenOpen ? (
-        <ContactScreen isMenuOpen={openContactMenu} />
+        <ContactScreen handleClose={handleClose} />
       ) : (
         <></>
       )}
