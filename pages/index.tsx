@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import LandingSlider from "../components/LandingSlider";
 import { GalleryItem, MainPageImage } from "../typings";
 import ContactScreen from "../components/ContactScreen";
+import { useState } from "react";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -14,18 +15,27 @@ interface GalleryProps {
 }
 
 const Home = ({ galleryItems, mainImage }: GalleryProps) => {
-  console.log(mainImage);
+  const [isContactScreenOpen, setIsContactScreenOpen] = useState(false);
+
+  const openContactMenu = (cb: boolean) => {
+    setIsContactScreenOpen(cb);
+  };
+
   return (
     <div className="">
       <Head>
         <title>Matt Milano Art</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ContactScreen />
+      {isContactScreenOpen ? (
+        <ContactScreen isMenuOpen={openContactMenu} />
+      ) : (
+        <></>
+      )}
       <Header />
       <LandingSlider mainImage={mainImage} />
       <About />
-      <Gallery galleryItems={galleryItems} />
+      <Gallery galleryItems={galleryItems} openContact={openContactMenu} />
       <Footer />
     </div>
   );

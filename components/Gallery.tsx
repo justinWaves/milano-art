@@ -1,19 +1,19 @@
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { urlFor } from "../sanity";
-import MilanoWave3 from "../public/milano-waves-3.svg";
-import milanoLion from "../public/milano-lion.jpg";
-import MilanoHand from "../public/milano-hand.svg";
-import MilanoWave2 from "../public/wave-divider.svg";
 import { GalleryItem } from "../typings";
 import PortableText from "react-portable-text";
 import HandButton from "./HandButton";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
+  openContact: any;
 }
 
-function Gallery({ galleryItems }: GalleryProps) {
+function Gallery({ galleryItems, openContact }: GalleryProps) {
+  const handleButtonClick = (buttonState: boolean) => {
+    openContact(buttonState);
+  };
+
   return (
     <>
       <div
@@ -45,16 +45,12 @@ function Gallery({ galleryItems }: GalleryProps) {
                       src={urlFor(item.mainImage).url()!}
                       className=" cursor-pointer my-auto"
                     />
-
-                    {/* <button className=" lg:hidden mx-auto">
-                      <HandButton />
-                    </button> */}
                   </div>
 
                   {/* text container*/}
                   <div className=" w-full lg:w-1/2 px-3 pt-3  lg:py-5 lg:px-5 flex flex-col justify-center">
                     <div className="lg:flex  hidden mb-10 mx-auto">
-                      <HandButton />
+                      <HandButton onSubmit={handleButtonClick} />
                     </div>
 
                     <h1 className="text-4xl  font-bold">{item.title}</h1>
@@ -101,8 +97,8 @@ function Gallery({ galleryItems }: GalleryProps) {
                 </div>
                 {/* purchase container mobile */}
                 <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-90  flex lg:hidden  lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-0 shadow-md">
-                  <div className="lg:hidden mx-auto">
-                    <HandButton />
+                  <div className="lg:hidden mx-auto mb-2">
+                    <HandButton onSubmit={handleButtonClick} />
                   </div>
                 </div>
               </div>
