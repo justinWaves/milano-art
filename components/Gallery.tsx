@@ -3,6 +3,7 @@ import { urlFor } from "../sanity";
 import { GalleryItem } from "../typings";
 import PortableText from "react-portable-text";
 import HandButton from "./HandButton";
+import MilanoWave2 from "../public/milano-wave-2.svg";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -27,8 +28,8 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
       >
         <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center">
           {/* <div className="w-screen h-20 bg-black  bg-opacity-50  bg-filter backdrop-blur-lg  "></div> */}
-          <div className="bg-black  bg-opacity-50 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10 ">
-            <h1 className="opacity-100 text-6xl lg:text-9xl text-slate-200 font-bold text-center pt-10 lg:pt-40 pb-10 lg:pb-5 ">
+          <div className="bg-white bg-opacity-100 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10    ">
+            <h1 className="text-6xl lg:text-9xl text-slate-700  font-bold text-center pt-32 pb-3   ">
               gallery
             </h1>
           </div>
@@ -105,7 +106,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
             ))}
           </div>
         </div>
-        {/* <MilanoWave2 className=" relative fill-white bottom-0 -mt-64" /> */}
+        <MilanoWave2 className=" relative fill-white -bottom-1 -mt-64 " />
       </div>
     </>
   );

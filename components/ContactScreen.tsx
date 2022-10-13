@@ -1,6 +1,11 @@
 import React from "react";
+import MilanoText from "../public/milano-text.svg";
 import MilanoHand from "../public/milano-hand.svg";
 import CloseIcon from "@mui/icons-material/Close";
+import EmailIcon from "@mui/icons-material/Email";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SubjectIcon from "@mui/icons-material/Subject";
+import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 
 function ContactScreen({ handleClose }: any) {
   return (
@@ -12,25 +17,38 @@ function ContactScreen({ handleClose }: any) {
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-between text-center h-screen">
-        <MilanoHand className="fill-slate-100 mt-5" />
-        <p className="text-white text-xs mt-3">inquire about art purchases</p>
-
+        <MilanoText className="fill-slate-100 pt-5 w-1/2 mx-auto" />
+        <MilanoHand className="fill-white w-1/6 mx-auto" />
         <div className="grid place-content-center space-y-5 m-10">
-          <input
-            type="text"
-            placeholder="Name"
-            className="p-3 rounded-sm w-full lg:w-5/6 mx-auto"
-          />
-          <input
-            type="text"
-            placeholder="Email"
-            className="p-3 rounded-sm w-full lg:w-5/6 mx-auto"
-          />
-          <input
-            type="text"
-            placeholder="Subject"
-            className="p-3 rounded-sm w-full lg:w-5/6 mx-auto"
-          />
+          <p className="text-white text-xs">
+            For inquires regarding art purchases, collaborations, other requests
+            use form below.
+          </p>
+          <div className="flex flex-row  ">
+            <AccountCircleIcon className="fill-white w-10 text-4xl mx-2" />
+
+            <input
+              type="text"
+              placeholder="Name"
+              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+            />
+          </div>
+          <div className="flex flex-row ">
+            <EmailIcon className="fill-white w-10 text-4xl m-2" />
+            <input
+              type="email"
+              placeholder="Email"
+              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+            />
+          </div>
+          <div className="flex flex-row ">
+            <SubjectIcon className="text-white w-10 text-4xl m-2" />
+            <input
+              type="text"
+              placeholder="Subject"
+              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+            />
+          </div>
           <textarea
             className="p-3 rounded-sm "
             name=""

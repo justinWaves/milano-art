@@ -1,9 +1,9 @@
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
-import About from "../components/About";
+import MeetMatt from "../components/MeetMatt";
 import Footer from "../components/Footer";
-import Gallery from "../components/Gallery";
 import Header from "../components/Header";
+import Gallery from "../components/Gallery";
 import LandingSlider from "../components/LandingSlider";
 import { GalleryItem, MainPageImage } from "../typings";
 import ContactScreen from "../components/ContactScreen";
@@ -32,9 +32,9 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
       ) : (
         <></>
       )}
-      <Header />
+      <Header openContact={toggleContactMenu} />
       <LandingSlider mainImage={mainImage} />
-      <About />
+      {/* <MeetM /> */}
       <Gallery galleryItems={galleryItems} openContact={toggleContactMenu} />
       <Footer />
     </div>

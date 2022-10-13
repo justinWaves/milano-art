@@ -4,7 +4,8 @@ import Image from "next/image";
 import MilanoHand from "../public/milano-hand.svg";
 import MilanoText from "../public/milano-text.svg";
 import FooterWave from "../public/footer-wave.svg";
-
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import MilanoPeople from "../public/milano-people.png";
 import MilanoSFVibe from "../public/milano-SF-vibe.png";
 // import MilanoFlowerHead from "../public/milano-flower-head.png";
@@ -16,8 +17,8 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer() {
   return (
-    <div className=" mt-10">
-      <div className="w-screen md:w-2/3  mx-auto -mb-10 p-5 bg-white max-w-xl">
+    <div className="-mt-2">
+      <div className="w-5/6 lg:w-2/3 h-fill  mx-auto lg:-mb-20 pt-20  bg-white ">
         <Image src={imageList[index]}></Image>
       </div>
       <FooterWave className="" />
@@ -26,7 +27,21 @@ function Footer() {
           <div className=" bg-black flex flex-col">
             <div className="p-5 md:p-5 pt-10 flex flex-col md:flex-row justify-between ">
               <div className="flex flex-col ">
-                <MilanoText className="fill-slate-200 w-44 mx-auto" />
+                <MilanoText className="fill-slate-200 w-44 mx-auto mb-3" />
+                <div className="flex flex-row justify-around mx-auto">
+                  <a
+                    href="https://www.instagram.com/mattmilanoart/"
+                    target="_blank"
+                  >
+                    <InstagramIcon className="text-white text-5xl m-1 " />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100063465401119"
+                    target="_blank"
+                  >
+                    <FacebookIcon className="text-white text-5xl m-1 " />
+                  </a>
+                </div>
               </div>
               <hr className="mt-10 mb-10" />
               <div className=" flex flex-row justify-between ">
@@ -61,7 +76,7 @@ function Footer() {
               Design and build by{" "}
               <a
                 href="https://justinwaves.github.io/jw-portfolio-2021/"
-                className="text-sky-300"
+                className="text-slate-500"
               >
                 Justin Weisberg
               </a>

@@ -6,7 +6,7 @@ import { urlFor } from "../sanity";
 
 function LandingSlider({ mainImage }: any) {
   return (
-    <div className="  w-screen h-screen overflow-hidden grid place-content-center">
+    <div className="  w-screen h-screen overflow-hidden grid place-content-center shadow-lg">
       <div className="mx-auto w-screen md:w-1/2 ">
         <img
           src={urlFor(mainImage[0].mainImage).url()!}
