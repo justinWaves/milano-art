@@ -50,7 +50,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
                   {/* text container*/}
                   <div className=" w-full lg:w-1/2 px-3 pt-3  lg:py-5 lg:px-5 flex flex-col justify-center">
                     <div className="lg:flex  hidden mb-10 mx-auto">
-                      <HandButton onSubmit={handleButtonClick} />
+                      <HandButton onClick={handleButtonClick} />
                     </div>
 
                     <h1 className="text-4xl  font-bold">{item.title}</h1>
@@ -98,7 +98,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
                 {/* purchase container mobile */}
                 <div className="w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-200 bg-opacity-90  flex lg:hidden  lg:flex-row  p-5 justify-center rounded-br-2xl rounded-bl-2xl  lg:rounded-xl relative -top-0 shadow-md">
                   <div className="lg:hidden mx-auto mb-2">
-                    <HandButton onSubmit={handleButtonClick} />
+                    <HandButton onClick={handleButtonClick} />
                   </div>
                 </div>
               </div>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import MilanoHand from "../public/milano-hand.svg";
 
-function HandButton({ onSubmit }: any) {
+function HandButton({ onClick }: any) {
   return (
     <button
       className="h-32 group cursor-pointer relative grid place-items-center"
-      onClick={() => onSubmit()}
+      onClick={() => onClick()}
     >
       <div className=" w-28 h-28 rounded-full bg-slate-200  absolute z-0 -left-3 group-hover:animate-ping"></div>
       <MilanoHand className="absolute z-1 w-20 hover:w-22 fill-red-500 mx-auto group-hover:animate-none group-hover:fill-red-800" />
