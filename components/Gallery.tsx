@@ -10,7 +10,7 @@ interface GalleryProps {
 }
 
 function Gallery({ galleryItems, openContact }: GalleryProps) {
-  const handleButtonClick = (cb) => {
+  const handleButtonClick = (cb: () => void) => {
     openContact(cb);
   };
 
