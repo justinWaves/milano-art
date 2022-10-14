@@ -18,7 +18,7 @@ function ContactScreen({ handleClose }: any) {
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-between text-center h-screen">
-        <MilanoText className="fill-slate-100 pt-5 w-1/2 mx-auto" />
+        <MilanoText className="fill-slate-100 pt-20 md:pt-5 w-1/2 mx-auto" />
 
         <div className="flex flex-row justify-around mx-auto">
           <a href="https://www.instagram.com/mattmilanoart/" target="_blank">

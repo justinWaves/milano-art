@@ -1,6 +1,5 @@
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
-import MeetMatt from "../components/MeetMatt";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Gallery from "../components/Gallery";
@@ -37,9 +36,8 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
       )}
       <Header openContact={toggleContactMenu} />
       <LandingSlider mainImage={mainImage} />
-      {/* <MeetM /> */}
       <Gallery galleryItems={galleryItems} openContact={toggleContactMenu} />
-      <Footer />
+      <Footer openContact={toggleContactMenu} />
       {/* <FloatingHand
         onClick={toggleContactMenu}
         className="fixed bottom-0 right-0"
