@@ -1,6 +1,6 @@
 import React from "react";
 import MilanoText from "../public/milano-text.svg";
-import MilanoHand from "../public/milano-hand.svg";
+// import MilanoHand from "../public/milano-hand.svg";
 import CloseIcon from "@mui/icons-material/Close";
 import EmailIcon from "@mui/icons-material/Email";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
