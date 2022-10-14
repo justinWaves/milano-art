@@ -4,7 +4,7 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MeetMatt from "../components/MeetMatt";
-import ContactScreen from "../components/ContactScreen"
+import ContactScreen from "../components/ContactScreen";
 
 function about() {
   const [isContactScreenOpen, setIsContactScreenOpen] = useState(false);
@@ -15,17 +15,17 @@ function about() {
 
   return (
     <div>
-            {isContactScreenOpen ? (
+      {isContactScreenOpen ? (
         <ContactScreen handleClose={toggleContactMenu} />
       ) : (
         <></>
       )}
-        <Header openContact={toggleContactMenu} />
+      <Header openContact={toggleContactMenu} />
       <div className="h-screen">
         <MeetMatt />
       </div>
 
-      <Footer />
+      <Footer openContact={toggleContactMenu} />
     </div>
   );
 }

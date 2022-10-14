@@ -19,7 +19,7 @@ function privacyPolicy() {
         <></>
       )}
       <Header openContact={toggleContactMenu} />
-      <div className="max-w-4xl mx-auto pt-40 mb-20">
+      <div className="max-w-4xl mx-auto pt-40 mb-20 p-12">
         <h1 className="text-3xl">Privacy Policy for Matt Milano Art</h1>
 
         <p>

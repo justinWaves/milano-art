@@ -19,7 +19,7 @@ function privacyPolicy() {
         <></>
       )}
       <Header openContact={toggleContactMenu} />
-      <div className="max-w-4xl mx-auto pt-40 mb-20">
+      <div className="max-w-4xl mx-auto pt-40 mb-20 p-12">
         <h1 className="text-3xl">Website Terms and Conditions of Use</h1>
 
         <h2 className="text-xl">1. Terms</h2>
