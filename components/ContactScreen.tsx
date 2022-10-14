@@ -5,7 +5,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import EmailIcon from "@mui/icons-material/Email";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SubjectIcon from "@mui/icons-material/Subject";
-import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 function ContactScreen({ handleClose }: any) {
   return (
@@ -18,7 +19,19 @@ function ContactScreen({ handleClose }: any) {
       </button>
       <div className="flex flex-col justify-between text-center h-screen">
         <MilanoText className="fill-slate-100 pt-5 w-1/2 mx-auto" />
-        <MilanoHand className="fill-white w-1/6 mx-auto" />
+
+        <div className="flex flex-row justify-around mx-auto">
+          <a href="https://www.instagram.com/mattmilanoart/" target="_blank">
+            <InstagramIcon className="text-white text-6xl m-1 " />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100063465401119"
+            target="_blank"
+          >
+            <FacebookIcon className="text-white text-6xl m-1 " />
+          </a>
+        </div>
+        {/* <MilanoHand className="fill-white w-1/6 mx-auto" /> */}
         <div className="grid place-content-center space-y-5 m-10">
           <p className="text-white text-xs">
             For inquires regarding art purchases, collaborations, other requests

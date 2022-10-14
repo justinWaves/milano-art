@@ -1,7 +1,6 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import FlowerHead from "../public/milano-flower-head.png";
-import { Parallax } from "react-scroll-parallax";
+
 import MilanoHand from "../public/milano-hand.svg";
 
 function About() {
@@ -53,7 +52,7 @@ function About() {
           <div className="absolute -bottom-80 lg:-bottom-80 left-10 z-0 ">
             <img
               src={"/matt-painting_3.jpg"}
-              className="w-4/6 relative top-20"
+              className="w-1/2 relative top-20"
             />
           </div>
         </ParallaxLayer>
@@ -67,10 +66,10 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="absolute -bottom-96 lg:-bottom-96 right-10 z-0 ">
+          <div className="absolute -bottom-96 lg:-bottom-96 right-10 z-0 w-1/2 ">
             <img
               src={"/matt-painting_4.jpg"}
-              className="w-96 top-96 lg:top-0 left-10 relative  "
+              className="top-96 lg:top-0  relative  "
             />
           </div>
         </ParallaxLayer>
