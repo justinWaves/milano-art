@@ -25,28 +25,28 @@ function ContactScreen({ handleClose }: any) {
             use form below.
           </p>
           <div className="flex flex-row  ">
-            <AccountCircleIcon className="fill-white w-10 text-4xl mx-2" />
+            <AccountCircleIcon className="fill-white w-10 text-4xl  h-10" />
 
             <input
               type="text"
               placeholder="Name"
-              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto  "
             />
           </div>
           <div className="flex flex-row ">
-            <EmailIcon className="fill-white w-10 text-4xl m-2" />
+            <EmailIcon className="fill-white w-10 text-4xl h-10" />
             <input
               type="email"
               placeholder="Email"
-              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto "
             />
           </div>
           <div className="flex flex-row ">
-            <SubjectIcon className="text-white w-10 text-4xl m-2" />
+            <SubjectIcon className="text-white w-10 text-4xl" />
             <input
               type="text"
               placeholder="Subject"
-              className="px-3 rounded-sm w-full lg:w-5/6 mx-auto max-h-12"
+              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto "
             />
           </div>
           <textarea

@@ -8,6 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import MilanoPeople from "../public/milano-people.png";
 import MilanoSFVibe from "../public/milano-SF-vibe.png";
+import HandButton from "./HandButton";
 // import MilanoFlowerHead from "../public/milano-flower-head.png";
 
 const imageList = [MilanoPeople, MilanoSFVibe];
@@ -17,9 +18,9 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer() {
   return (
-    <div className="-mt-2">
-      <div className="w-5/6 lg:w-2/3 h-fill  mx-auto lg:-mb-20 pt-20  bg-white ">
-        <Image src={imageList[index]}></Image>
+    <div className="-mt-2 relative">
+      <div className="w-screen md:w-5/6 lg:w-4/5 xl:w-1/2 mx-auto md:-mb-20 lg:-mb-40 xl:-mb-60 p-20  bg-white ">
+        <Image src={imageList[index]} layout="responsive"></Image>
       </div>
       <FooterWave className="" />
       <div className="bg-slate-200 flex flex-col w-screen relative bottom-0">
@@ -50,24 +51,21 @@ function Footer() {
                   <MilanoText className="fill-slate-200" />
                 </Link> */}
                   <div className="text-slate-300 ">
-                    <Link href="/">
-                      <h2 className="hover:text-red-600 cursor-pointer">art</h2>
+                    <Link href="/about">
+                      <h2 className="hover:text-red-600 cursor-pointer">
+                        about
+                      </h2>
                     </Link>
-                    <h2 className="hover:text-red-600 cursor-pointer">shop</h2>
-                    {/* <h2 className="hover:text-red-600 cursor-pointer">about</h2> */}
+
                     <h2 className="hover:text-red-600 cursor-pointer">
                       contact
                     </h2>
-                    <h2 className="hover:text-red-600 cursor-pointer">
-                      community
-                    </h2>
                   </div>
                 </div>
-                <Link href="/">
-                  <a>
-                    <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
-                  </a>
-                </Link>
+
+                <a>
+                  <MilanoHand className="fill-slate-800 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
+                </a>
               </div>
             </div>
           </div>

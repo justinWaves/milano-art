@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import MattPaints1 from "../public/matt-painting_1.jpg";
+import FlowerHead from "../public/milano-flower-head.png";
+import { Parallax } from "react-scroll-parallax";
 import MilanoHand from "../public/milano-hand.svg";
 
 function About() {
@@ -9,7 +10,7 @@ function About() {
       <Parallax pages={2} style={{ top: "0", left: "0" }}>
         <ParallaxLayer
           offset={1}
-          speed={2}
+          speed={1}
           className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
           <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 lg:bg-opacity-0 p-5 rounded-lg h-fit">
@@ -35,22 +36,10 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="mx-auto my-auto z-0">
-            <img src={"/matt-painting_1.jpg"} />
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={0}
-          speed={0.5}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div className=" z-0 ">
-            <img src={"/matt-painting_1.jpg"} />
+          <div className="flex flex-col h-screen w-screen justify-center">
+            <div className="mx-auto my-auto z-0 relative">
+              <img src={"/matt-painting_1.jpg"} className="" />
+            </div>
           </div>
         </ParallaxLayer>
 
@@ -61,8 +50,11 @@ function About() {
             position: "relative",
           }}
         >
-          <div className="absolute -bottom-80 left-10 z-0 ">
-            <img src={"/matt-painting_3.jpg"} className="w-80" />
+          <div className="absolute -bottom-80 lg:-bottom-80 left-10 z-0 ">
+            <img
+              src={"/matt-painting_3.jpg"}
+              className="w-4/6 relative top-20"
+            />
           </div>
         </ParallaxLayer>
 
@@ -75,8 +67,11 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="absolute -bottom-80 right-10 z-0 ">
-            <img src={"/matt-painting_4.jpg"} className="w-80" />
+          <div className="absolute -bottom-96 lg:-bottom-96 right-10 z-0 ">
+            <img
+              src={"/matt-painting_4.jpg"}
+              className="w-96 top-96 lg:top-0 left-10 relative  "
+            />
           </div>
         </ParallaxLayer>
 
@@ -90,7 +85,7 @@ function About() {
           }}
         >
           <div className="absolute bottom-10 text-2xl animate-bounce z-2">
-            <MilanoHand className="w-10 animate-pulse fill-slate-200 md:fill-slate-700 " />
+            <MilanoHand className="w-10 animate-pulse fill-slate-700 " />
           </div>
         </ParallaxLayer>
         <ParallaxLayer
@@ -103,7 +98,7 @@ function About() {
           }}
         >
           <div className="mx-auto my-auto z-3 relative">
-            <h1 className="text-6xl relative  text-white bg-black">
+            <h1 className="text-6xl relative  text-white bg-black p-2 rounded-sm bg-opacity-20 backdrop-blur-md">
               Meet Matt Milano
             </h1>
           </div>

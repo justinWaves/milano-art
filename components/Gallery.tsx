@@ -4,7 +4,7 @@ import { GalleryItem } from "../typings";
 import PortableText from "react-portable-text";
 import HandButton from "./HandButton";
 import MilanoWave2 from "../public/milano-wave-2.svg";
-
+import { Parallax } from "react-scroll-parallax";
 interface GalleryProps {
   galleryItems: [GalleryItem];
   openContact: any;
@@ -16,26 +16,26 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
   };
 
   return (
-    <>
-      <div
-        className="overflow-hidden
+    <div
+      className="overflow-hidden
       w-screen bg-gradient-to-r
       from-blue-400
       to-orange-500
       via-purple-500
       animate-gradient-xy
-       relative"
-      >
-        <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center">
-          {/* <div className="w-screen h-20 bg-black  bg-opacity-50  bg-filter backdrop-blur-lg  "></div> */}
-          <div className="bg-white bg-opacity-100 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10    ">
-            <h1 className="text-6xl lg:text-9xl text-slate-700  font-bold text-center pt-32 pb-3   ">
-              gallery
-            </h1>
-          </div>
+       relative "
+    >
+      <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center scroll-smooth">
+        {/* <div className="w-screen h-20 bg-black  bg-opacity-50  bg-filter backdrop-blur-lg  "></div> */}
+        <div className="bg-black bg-opacity-100 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10    ">
+          <h1 className="text-6xl lg:text-9xl text-slate-200  font-bold text-center pt-10 pb-5   ">
+            gallery
+          </h1>
+        </div>
+        <Parallax speed={-20}>
           {/* <MilanoWave3 className="w-screen " /> */}
 
-          <div className="mt-20 pb-72">
+          <div className="mt-80 pb-96 ">
             {/* Map of Gallery Items */}
             {galleryItems.map((item) => (
               <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20 ">
@@ -105,10 +105,11 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
               </div>
             ))}
           </div>
-        </div>
-        <MilanoWave2 className=" relative fill-white -bottom-1 -mt-64 " />
+        </Parallax>
       </div>
-    </>
+
+      <MilanoWave2 className=" relative fill-white -bottom-1 -mt-64 " />
+    </div>
   );
 }
 

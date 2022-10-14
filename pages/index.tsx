@@ -8,6 +8,8 @@ import LandingSlider from "../components/LandingSlider";
 import { GalleryItem, MainPageImage } from "../typings";
 import ContactScreen from "../components/ContactScreen";
 import { useState } from "react";
+import HandButton from "../components/HandButton";
+import FloatingHand from "../components/FloatingHand";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -27,6 +29,7 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
         <title>Matt Milano Art</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {isContactScreenOpen ? (
         <ContactScreen handleClose={toggleContactMenu} />
       ) : (
@@ -37,6 +40,10 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
       {/* <MeetM /> */}
       <Gallery galleryItems={galleryItems} openContact={toggleContactMenu} />
       <Footer />
+      {/* <FloatingHand
+        onClick={toggleContactMenu}
+        className="fixed bottom-0 right-0"
+      /> */}
     </div>
   );
 };
