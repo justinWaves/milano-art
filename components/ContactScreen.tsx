@@ -7,6 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SubjectIcon from "@mui/icons-material/Subject";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 function ContactScreen({ handleClose }: any) {
   return (
@@ -18,7 +19,7 @@ function ContactScreen({ handleClose }: any) {
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-between text-center h-screen">
-        <MilanoText className="fill-slate-100 pt-20 md:pt-5 w-1/2 mx-auto" />
+        <MilanoText className="fill-slate-100 pt-3 md:pt-5 w-1/2 mx-auto" />
 
         <div className="flex flex-row justify-around mx-auto">
           <a href="https://www.instagram.com/mattmilanoart/" target="_blank">
@@ -32,34 +33,45 @@ function ContactScreen({ handleClose }: any) {
           </a>
         </div>
         {/* <MilanoHand className="fill-white w-1/6 mx-auto" /> */}
-        <div className="grid place-content-center space-y-5 m-10">
+        <div className="grid place-content-center space-y-5 m-5 md:m-10">
           <p className="text-white text-xs">
             For inquires regarding art purchases, collaborations, other requests
             use form below.
           </p>
           <div className="flex flex-row  ">
-            <AccountCircleIcon className="fill-white w-10 text-4xl  h-10" />
+            <AccountCircleIcon className="fill-white text-4xl  h-8" />
 
             <input
               type="text"
               placeholder="Name"
-              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto  "
+              className="ml-3  px-2 rounded-sm w-full lg:w-5/6 mx-auto  "
             />
           </div>
           <div className="flex flex-row ">
-            <EmailIcon className="fill-white w-10 text-4xl h-10" />
+            <EmailIcon
+              className="fill-white h-8 text-4xl relative
+            "
+            />
             <input
               type="email"
               placeholder="Email"
-              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto "
+              className="ml-3  px-2 rounded-sm w-full lg:w-5/6 mx-auto "
             />
           </div>
           <div className="flex flex-row ">
-            <SubjectIcon className="text-white w-10 text-4xl" />
+            <SubjectIcon className="text-white h-8 text-4xl" />
             <input
               type="text"
               placeholder="Subject"
-              className="ml-3  px-3 rounded-sm w-full lg:w-5/6 mx-auto "
+              className="ml-3  px-2 rounded-sm w-full lg:w-5/6 mx-auto "
+            />
+          </div>
+          <div className="flex flex-row ">
+            <LocalPhoneIcon className="text-white h-8 text-4xl" />
+            <input
+              type="text"
+              placeholder="Phone"
+              className="ml-3  px-2 rounded-sm w-full lg:w-5/6 mx-auto "
             />
           </div>
           <textarea
@@ -68,7 +80,7 @@ function ContactScreen({ handleClose }: any) {
             id=""
             placeholder="Message"
             cols={50}
-            rows={8}
+            rows={4}
           ></textarea>
           <button className="h-10 bg-sky-200 hover:bg-sky-400  text-slate-900">
             Submit

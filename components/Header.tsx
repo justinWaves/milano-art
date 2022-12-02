@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -9,6 +9,20 @@ import { useSpring, animated, config } from "react-spring";
 
 function Header({ openContact }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [show, handleShow] = useState(false);
+
+  // const transitionNavBar = () => {
+  //   if (window.scrollY > 100) {
+  //     handleShow(true);
+  //   } else {
+  //     handleShow(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", transitionNavBar);
+  //   return () => window.removeEventListener("scroll", transitionNavBar);
+  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,8 +40,8 @@ function Header({ openContact }: any) {
   return (
     <>
       <header
-        className="flex justify-between fixed px-2 md:rounded-md
- p-2  mx-auto max-w-7xl  bg-white w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50"
+        className={`flex justify-between fixed px-2 md:rounded-md
+ p-2  mx-auto max-w-7xl bg-white  w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50`}
       >
         <div
           className="flex items-center
