@@ -9,20 +9,26 @@ import { useSpring, animated, config } from "react-spring";
 
 function Header({ openContact }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [show, handleShow] = useState(false);
+  const [show, handleShow] = useState(false);
 
-  // const transitionNavBar = () => {
-  //   if (window.scrollY > 100) {
-  //     handleShow(true);
-  //   } else {
-  //     handleShow(false);
-  //   }
-  // };
+  const transitionNavBar = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", transitionNavBar);
-  //   return () => window.removeEventListener("scroll", transitionNavBar);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", transitionNavBar);
+    return () => window.removeEventListener("scroll", transitionNavBar);
+  }, []);
+
+  if (show) {
+    setTimeout(() => {
+      handleShow(false);
+    }, 2000);
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,8 +46,10 @@ function Header({ openContact }: any) {
   return (
     <>
       <header
-        className={`flex justify-between fixed px-2 md:rounded-md
- p-2  mx-auto max-w-7xl bg-white  w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50`}
+        className={`transition ease-in-out duration-1000 flex justify-between fixed px-2 md:rounded-md
+ p-2  mx-auto max-w-7xl  w-screen z-10 left-0 right-0  ${
+   show && " bg-filter backdrop-blur-xl bg-opacity-50 border-b"
+ } border-slate-400 border-opacity-5`}
       >
         <div
           className="flex items-center
@@ -49,7 +57,11 @@ function Header({ openContact }: any) {
         >
           <Link href="/">
             <div className="object-fill w-44 cursor-pointer">
-              <MilanoText className="w-44  fill-slate-900" />
+              <MilanoText
+                className={`w-28 transition ease-in-out duration-1000 ${
+                  show ? "fill-slate-200 " : "fill-slate-900"
+                }`}
+              />
             </div>
           </Link>
           <div
@@ -57,7 +69,13 @@ function Header({ openContact }: any) {
      space-x-5 text-slate-900"
           >
             <Link href="/about">
-              <h3 className="cursor-pointer  hover:text-sky-100  bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 text-white">
+              <h3
+                className={`transition ease-in-out duration-1000 cursor-pointer  hover:text-sky-100 bg-slate-600   hover:bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                  show
+                    ? "text-slate-200 bg-opacity-50"
+                    : "text-slate-900 bg-opacity-0"
+                }`}
+              >
                 about
               </h3>
             </Link>
@@ -72,7 +90,13 @@ function Header({ openContact }: any) {
               </h3>
             </Link> */}
             <div onClick={() => openContact()}>
-              <h3 className="cursor-pointer  hover:text-sky-100  bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 text-white">
+              <h3
+                className={`transition ease-in-out duration-1000 cursor-pointer  hover:text-sky-100 bg-slate-600   hover:bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                  show
+                    ? "text-slate-200 bg-opacity-50"
+                    : "text-slate-900 bg-opacity-0"
+                }`}
+              >
                 contact
               </h3>
             </div>
@@ -83,12 +107,12 @@ function Header({ openContact }: any) {
         </div>
 
         <button
-          className=" rounded-md border border-slate-600 p-2 block lg:hidden"
+          className={`rounded-md border bg-slate-200 p-2 block lg:hidden`}
           onClick={toggleMenu}
         >
           <MenuIcon
-            fontSize="large"
-            className="hover:fill-red-600 hover:animate-pulse"
+            fontSize="medium"
+            className={`hover:fill-red-600 hover:animate-pulse`}
           />
         </button>
       </header>
@@ -105,13 +129,13 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
             className=" rounded-md border border-slate-600 hover:text-red-700 p-2 absolute right-2 top-2"
             onClick={toggleMenu}
           >
-            <CloseIcon fontSize="large" />
+            <CloseIcon fontSize="medium" />
           </button>
           <div className="mx-auto my-auto">
             <Link href="/">
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-                <CottageIcon className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2" />
+                <CottageIcon className="text-6xl text-slate-200 hover:text-red-700 cursor-pointer pl-2" />
               </div>
             </Link>
             {/* <div className="flex flex-row group">
