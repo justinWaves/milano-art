@@ -15,6 +15,10 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
     openContact(cb);
   };
 
+  const sortedGalleryItems = galleryItems.sort((a, b) => {
+    return new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime();
+  });
+
   return (
     <div
       className="overflow-hidden
@@ -38,7 +42,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
 
           <div className="mt-80 pb-96 ">
             {/* Map of Gallery Items */}
-            {galleryItems.map((item) => (
+            {sortedGalleryItems.map((item) => (
               <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20 ">
                 <div className="relative w-5/6  mx-auto z-1 lg:w-5/6 bg-white bg-filter backdrop-blur-xl text-slate-900 bg-opacity-90 flex flex-col lg:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl lg:rounded-2xl">
                   {/* Image desktop*/}

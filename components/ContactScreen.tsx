@@ -19,21 +19,21 @@ function ContactScreen({ handleClose }: any) {
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-between text-center h-screen">
-        <MilanoText className="fill-slate-100 pt-3 md:pt-5 w-1/2 mx-auto" />
+        <MilanoText className="fill-slate-100 pt-5 md:pt-5 w-1/2 ml-5 md:mx-auto" />
 
         <div className="flex flex-row justify-around mx-auto">
           <a href="https://www.instagram.com/mattmilanoart/" target="_blank">
-            <InstagramIcon className="text-white text-6xl m-1 " />
+            <InstagramIcon className="text-white text-6xl m-2 " />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=100063465401119"
             target="_blank"
           >
-            <FacebookIcon className="text-white text-6xl m-1 " />
+            <FacebookIcon className="text-white text-6xl m-2 " />
           </a>
         </div>
         {/* <MilanoHand className="fill-white w-1/6 mx-auto" /> */}
-        <div className="grid place-content-center space-y-5 m-5 md:m-10">
+        <div className="grid place-content-center space-y-3 m-5 md:m-10 mb-10">
           <p className="text-white text-xs">
             For inquires regarding art purchases, collaborations, other requests
             use form below.

@@ -58,8 +58,10 @@ function Header({ openContact }: any) {
           <Link href="/">
             <div className="object-fill w-44 cursor-pointer">
               <MilanoText
-                className={`w-28 transition ease-in-out duration-1000 ${
-                  show ? "fill-slate-200 " : "fill-slate-900"
+                className={`w-28 transition ease-in-out duration-1000 rounded-full bg-opacity-50 p-3 ${
+                  show
+                    ? "fill-slate-200  bg-slate-500  "
+                    : "fill-slate-900  bg-none "
                 }`}
               />
             </div>
@@ -135,7 +137,7 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
             <Link href="/">
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-                <CottageIcon className="text-6xl text-slate-200 hover:text-red-700 cursor-pointer pl-2" />
+                <CottageIcon className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2" />
               </div>
             </Link>
             {/* <div className="flex flex-row group">
