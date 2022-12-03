@@ -28,10 +28,10 @@ function Footer({ openContact }: any) {
           <div className=" bg-black flex flex-col">
             <div className="p-5 md:p-5 pt-10 flex flex-col md:flex-row justify-between ">
               <div className="flex flex-col ">
+                <Link href="/">
+                  <MilanoText className="fill-slate-200 w-44 mx-auto mb-3 cursor-pointer" />
+                </Link>
                 <div className="flex flex-row justify-around mx-auto">
-                  <Link href="/">
-                    <MilanoText className="fill-slate-200 w-32 mr-3 mx-auto mb-3 cursor-pointer" />
-                  </Link>
                   <a
                     href="https://www.instagram.com/mattmilanoart/"
                     target="_blank"

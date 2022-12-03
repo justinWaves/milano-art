@@ -11,15 +11,15 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 function ContactScreen({ handleClose }: any) {
   return (
-    <div className="w-screen h-screen backdrop-blur-lg bg-opacity-60 bg-black z-20 fixed scroll-smooth">
+    <div className="w-screen h-screen backdrop-blur-lg bg-opacity-60 bg-black z-20 fixed s">
       <button
         onClick={() => handleClose()}
         className=" rounded-md border border-slate-100 hover:border-red-500 text-white hover:text-red-500 p-2 absolute right-2 top-2"
       >
         <CloseIcon fontSize="large" />
       </button>
-      <div className="flex flex-col justify-between text-center h-screen">
-        <MilanoText className="fill-slate-100 pt-5 md:pt-5 w-1/2 ml-5 md:mx-auto" />
+      <div className="flex flex-col justify-center text-center h-screen">
+        <MilanoText className="fill-slate-100 pt-5 mb-5 md:pt-5 w-2/3 md:w-1/4 mx-auto" />
 
         <div className="flex flex-row justify-around mx-auto">
           <a href="https://www.instagram.com/mattmilanoart/" target="_blank">
