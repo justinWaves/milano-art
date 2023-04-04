@@ -33,7 +33,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
       <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center scroll-smooth">
         {/* <div className="w-screen h-20 bg-black  bg-opacity-50  bg-filter backdrop-blur-lg  "></div> */}
         <div className="bg-black bg-opacity-100 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10    ">
-          <h1 className="text-6xl lg:text-9xl text-slate-200  font-bold text-center pt-20 pb-5   ">
+          <h1 className="text-6xl lg:text-9xl font-thin text-slate-200  text-center pt-20 pb-5   ">
             gallery
           </h1>
         </div>
@@ -59,10 +59,10 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
                       <HandButton onClick={handleButtonClick} />
                     </div>
 
-                    <h1 className="text-4xl  font-bold">{item.title}</h1>
-                    <p className="text-slate-500 text-xs">
+                    <h1 className="text-5xl font-thin ">{item.title}</h1>
+                    {/* <p className="text-slate-500 text-xs">
                       Posted on {new Date(item._createdAt).toLocaleString()}
-                    </p>
+                    </p> */}
                     <div className="mt-5 overflow-hidden">
                       <PortableText
                         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}

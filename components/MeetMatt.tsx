@@ -13,7 +13,7 @@ function About() {
           className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
           <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 lg:bg-opacity-0 p-5 rounded-lg h-fit">
-            <h1 className="text-4xl">Meet Matt Milanio,</h1>
+            <h1 className="text-4xl">Meet Matt Milano,</h1>
             <p className="mt-3">
               Its rare today that an artist rises amongst the ranks of the
               greats. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -41,7 +41,7 @@ function About() {
             </div>
           </div>
         </ParallaxLayer>
-
+        {/* 
         <ParallaxLayer
           offset={0}
           speed={3.5}
@@ -55,8 +55,8 @@ function About() {
               className="w-1/2 relative top-20"
             />
           </div>
-        </ParallaxLayer>
-
+        </ParallaxLayer> */}
+        {/* 
         <ParallaxLayer
           offset={0}
           speed={4.5}
@@ -72,7 +72,7 @@ function About() {
               className="top-96 lg:top-0  relative  "
             />
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={0}
@@ -97,7 +97,7 @@ function About() {
           }}
         >
           <div className="mx-auto my-auto z-3 relative">
-            <h1 className="text-6xl relative  text-white bg-black p-2 rounded-sm bg-opacity-20 backdrop-blur-md">
+            <h1 className="text-6xl relative  text-white bg-black p-2  px-20 rounded-3xl bg-opacity-60 backdrop-blur-md">
               Meet Matt Milano
             </h1>
           </div>

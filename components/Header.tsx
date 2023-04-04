@@ -24,11 +24,11 @@ function Header({ openContact }: any) {
     return () => window.removeEventListener("scroll", transitionNavBar);
   }, []);
 
-  if (show) {
-    setTimeout(() => {
-      handleShow(false);
-    }, 2000);
-  }
+  // if (show) {
+  //   setTimeout(() => {
+  //     handleShow(false);
+  //   }, 500);
+  // }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,9 +47,11 @@ function Header({ openContact }: any) {
     <>
       <header
         className={`transition ease-in-out duration-1000 flex justify-between fixed px-2 md:rounded-md
- p-2  mx-auto max-w-7xl  w-screen z-10 left-0 right-0  ${
-   show && " bg-filter backdrop-blur-xl bg-opacity-50 border-b"
- } border-slate-400 border-opacity-5`}
+ p-2  mx-auto max-w-7xl  w-screen z-10 left-0 right-0 border-b  ${
+   show ? "bg-black" : "bg-white"
+ } ${
+          show && " bg-filter backdrop-blur-sm bg-opacity-60  "
+        } border-slate-400 border-opacity-5`}
       >
         <div
           className="flex items-center
@@ -58,10 +60,8 @@ function Header({ openContact }: any) {
           <Link href="/">
             <div className="object-fill w-44 cursor-pointer">
               <MilanoText
-                className={`w-28 transition ease-in-out duration-1000 rounded-full bg-opacity-50 p-3 ${
-                  show
-                    ? "fill-slate-200  bg-slate-500  "
-                    : "fill-slate-900  bg-none "
+                className={`w-28 transition ease-in-out duration-1000  p-3 ${
+                  show ? "fill-slate-200    " : "fill-slate-900  "
                 }`}
               />
             </div>
@@ -72,39 +72,54 @@ function Header({ openContact }: any) {
           >
             <Link href="/about">
               <h3
-                className={`transition ease-in-out duration-1000 cursor-pointer  hover:text-sky-100 bg-slate-600   hover:bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                className={`group transition ease-in-out duration-1000 cursor-pointer   font-thin text-lg bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
                   show
                     ? "text-slate-200 bg-opacity-50"
                     : "text-slate-900 bg-opacity-0"
                 }`}
               >
-                about
+                About
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] ${
+                    show ? "bg-slate-200 " : "bg-slate-900 "
+                  }`}
+                ></span>
               </h3>
             </Link>
-            {/* <Link href="/">
-              <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600  bg-slate-200 py-1 rounded-full px-4 ">
-                shop
-              </h3>
-            </Link> */}
-            {/* <Link href="/">
-              <h3 className="cursor-pointer hover:animate-pulse hover:text-red-600">
-                about
-              </h3>
-            </Link> */}
-            <div onClick={() => openContact()}>
+
+            <Link href="/gallery">
               <h3
-                className={`transition ease-in-out duration-1000 cursor-pointer  hover:text-sky-100 bg-slate-600   hover:bg-slate-900 bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                className={`group transition ease-in-out duration-1000 cursor-pointer  font-thin text-lg   bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
                   show
                     ? "text-slate-200 bg-opacity-50"
                     : "text-slate-900 bg-opacity-0"
                 }`}
               >
-                contact
+                Gallery
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] ${
+                    show ? "bg-slate-200 " : "bg-slate-900 "
+                  }`}
+                ></span>
+              </h3>
+            </Link>
+
+            <div onClick={() => openContact()}>
+              <h3
+                className={`group transition ease-in-out duration-1000 cursor-pointer   font-thin text-lg bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                  show
+                    ? "text-slate-200 bg-opacity-50"
+                    : "text-slate-900 bg-opacity-0"
+                }`}
+              >
+                Contact
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] ${
+                    show ? "bg-slate-200 " : "bg-slate-900 "
+                  }`}
+                ></span>
               </h3>
             </div>
-            {/* <h3 className="text-black  bg-slate-200 py-1 rounded-full px-4 ">
-              community
-            </h3> */}
           </div>
         </div>
 
@@ -125,10 +140,10 @@ function Header({ openContact }: any) {
         <animated.div
           style={menuAnimation}
           className=" flex fixed 
-p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-blur-xl bg-opacity-50 z-15"
+p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-blur-xl bg-opacity-50 z-15"
         >
           <button
-            className=" rounded-md border border-slate-600 hover:text-red-700 p-2 absolute right-2 top-2"
+            className=" rounded-md border border-slate-200 hover:text-red-700 p-2 absolute right-2 top-2 text-slate-200"
             onClick={toggleMenu}
           >
             <CloseIcon fontSize="medium" />
@@ -136,31 +151,42 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
           <div className="mx-auto my-auto">
             <Link href="/">
               <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-                <CottageIcon className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2" />
+                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
+                <div className="group">
+                  <CottageIcon className="text-6xl text-slate-200  cursor-pointer pl-2 " />
+                  <span
+                    className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                  ></span>
+                </div>
               </div>
             </Link>
-            {/* <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
-                shop
-              </h1>
-            </div> */}
+
             <Link href="/about">
               <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-                <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
+                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
+                <h1 className="text-6xl text-slate-200  cursor-pointer pl-2 group">
                   about
+                  <span
+                    className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                  ></span>
+                </h1>
+              </div>
+            </Link>
+            <Link href="/gallery">
+              <div className="flex flex-row group" onClick={toggleMenu}>
+                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
+                <h1 className="text-6xl text-slate-200  cursor-pointer pl-2 group">
+                  gallery
+                  <span
+                    className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                  ></span>
                 </h1>
               </div>
             </Link>
 
-            {/* <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
-                about
-              </h1>
-            </div> */}
             <div
               className="flex flex-row group"
               onClick={() => {
@@ -168,17 +194,25 @@ p-3  mx-auto  bg-white h-screen w-screen first-letter z-10  bg-filter backdrop-b
                 toggleMenu();
               }}
             >
-              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-red-700 cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-200 cursor-pointer pl-2 group">
                 contact
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                ></span>
               </h1>
             </div>
-            {/* <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-red-700 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-900 hover:text-red-700  cursor-pointer pl-2">
+            <div className="flex flex-row group">
+              <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
+              <h1 className="text-6xl text-slate-200   cursor-pointer pl-2">
                 community
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                ></span>
               </h1>
-            </div> */}
+            </div>
           </div>
         </animated.div>
       ) : (

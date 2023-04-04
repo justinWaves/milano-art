@@ -18,9 +18,9 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer({ openContact }: any) {
   return (
-    <div className="-mt-2 relative h-screen">
+    <div className="-mt-2 absolute h-screen">
       <div className="w-screen h-fit md:w-5/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-20 mt-40 lg:mt-0">
-        <Image src={imageList[index]} layout="responsive"></Image>
+        <Image src={imageList[index]}></Image>
       </div>
       <FooterWave className="relative -bottom-1" />
       <div className=" flex flex-col w-screen relative bottom-0">

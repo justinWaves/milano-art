@@ -11,7 +11,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 function ContactScreen({ handleClose }: any) {
   return (
-    <div className="w-screen h-screen backdrop-blur-lg bg-opacity-60 bg-black z-20 fixed s">
+    <div className="w-screen h-screen backdrop-blur-2xl bg-opacity-60 bg-black z-20 fixed s">
       <button
         onClick={() => handleClose()}
         className=" rounded-md border border-slate-100 hover:border-red-500 text-white hover:text-red-500 p-2 absolute right-2 top-2"
