@@ -24,11 +24,17 @@ function gallery({ galleryItems }: galleryProps) {
       ) : (
         <></>
       )}
+      <div className="relative min-h-screen">
+        <div className="pb-[100vh]">
+          <Header openContact={toggleContactMenu} />
 
-      <Header openContact={toggleContactMenu} />
-
-      <Gallery galleryItems={galleryItems} openContact={toggleContactMenu} />
-      <Footer />
+          <Gallery
+            galleryItems={galleryItems}
+            openContact={toggleContactMenu}
+          />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
