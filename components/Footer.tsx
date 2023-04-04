@@ -18,7 +18,7 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer({ openContact }: any) {
   return (
-    <div className="-mt-2 absolute h-screen">
+    <div className="-mt-2 absolute bottom-0 h-screen">
       <div className="w-screen h-fit md:w-5/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-20 mt-40 lg:mt-0">
         <Image src={imageList[index]}></Image>
       </div>
@@ -82,8 +82,8 @@ function Footer({ openContact }: any) {
                   className="group cursor-pointer"
                   onClick={() => openContact()}
                 >
-                  <MilanoHand className="fill-slate-800 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
-                  <p className="text-xs text-slate-800 group-hover:text-red-600 text-center ml-3 mt-1">
+                  <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
+                  <p className="text-xs text-slate-200 group-hover:text-red-600 text-center ml-3 mt-1">
                     reach out
                   </p>
                 </div>

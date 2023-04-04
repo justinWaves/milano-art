@@ -124,12 +124,16 @@ function Header({ openContact }: any) {
         </div>
 
         <button
-          className={`rounded-md border bg-slate-200 p-2 block lg:hidden`}
+          className={`rounded-md border  ${
+            show ? "border-slate-200 " : "border-slate-900 "
+          } p-2 block lg:hidden`}
           onClick={toggleMenu}
         >
           <MenuIcon
             fontSize="medium"
-            className={`hover:fill-red-600 hover:animate-pulse`}
+            className={` hover:animate-spin transition-all duration-500 ${
+              show ? "text-slate-200 " : "text-slate-900 "
+            }`}
           />
         </button>
       </header>
@@ -143,7 +147,7 @@ function Header({ openContact }: any) {
 p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-blur-xl bg-opacity-50 z-15"
         >
           <button
-            className=" rounded-md border border-slate-200 hover:text-red-700 p-2 absolute right-2 top-2 text-slate-200"
+            className=" rounded-md border border-slate-200 hover:bg-white hover:bg-opacity-20 p-2 absolute right-2 top-2 text-slate-200 transition-all duration-500"
             onClick={toggleMenu}
           >
             <CloseIcon fontSize="medium" />
@@ -151,21 +155,19 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
           <div className="mx-auto my-auto">
             <Link href="/">
               <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
-                <div className="group">
-                  <CottageIcon className="text-6xl text-slate-200  cursor-pointer pl-2 " />
-                  <span
-                    className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
-                  `}
-                  ></span>
+                <MilanoHand className="w-10 fill-slate-900 invisible " />
+
+                <div className="relative group cursor-pointer">
+                  <MilanoHand className="w-1/2 fill-slate-200  cursor-pointer pl-2 group-hover:fill-sky-300 transition-all duration-1000 z-10" />
+                  <div className="bg-sky-300 bg-opacity-30 absolute z-0 w-44 h-44 bottom-2 -left-2 rounded-full invisible group-hover:visible animate-ping"></div>
                 </div>
               </div>
             </Link>
 
             <Link href="/about">
               <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
-                <h1 className="text-6xl text-slate-200  cursor-pointer pl-2 group">
+                <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
                   about
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -176,8 +178,8 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
             </Link>
             <Link href="/gallery">
               <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
-                <h1 className="text-6xl text-slate-200  cursor-pointer pl-2 group">
+                <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
                   gallery
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -194,8 +196,8 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
                 toggleMenu();
               }}
             >
-              <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-200 cursor-pointer pl-2 group">
+              <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+              <h1 className="text-6xl text-slate-200 font-thin cursor-pointer pl-2 group">
                 contact
                 <span
                   className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -204,8 +206,8 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
               </h1>
             </div>
             <div className="flex flex-row group">
-              <MilanoHand className="w-10 fill-slate-900 invisible group-hover:visible" />
-              <h1 className="text-6xl text-slate-200   cursor-pointer pl-2">
+              <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+              <h1 className="text-6xl text-slate-200 font-thin   cursor-pointer pl-2">
                 community
                 <span
                   className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 

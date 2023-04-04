@@ -34,10 +34,18 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
       ) : (
         <></>
       )}
-      <Header openContact={toggleContactMenu} />
-      <LandingSlider mainImage={mainImage} />
-      <Gallery galleryItems={galleryItems} openContact={toggleContactMenu} />
-      <Footer openContact={toggleContactMenu} />
+      <div className="relative min-h-screen">
+        <div className="pb-[80vh]">
+          <Header openContact={toggleContactMenu} />
+
+          <LandingSlider mainImage={mainImage} />
+          <Gallery
+            galleryItems={galleryItems}
+            openContact={toggleContactMenu}
+          />
+        </div>
+        <Footer openContact={toggleContactMenu} />
+      </div>
       {/* <FloatingHand
         onClick={toggleContactMenu}
         className="fixed bottom-0 right-0"
