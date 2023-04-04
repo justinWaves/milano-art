@@ -20,12 +20,14 @@ function about() {
       ) : (
         <></>
       )}
+
       <Header openContact={toggleContactMenu} />
       <div className="h-screen">
         <MeetMatt />
       </div>
-
-      <Footer openContact={toggleContactMenu} />
+      {/* </div>
+        <Footer openContact={toggleContactMenu} />
+      </div> */}
     </div>
   );
 }

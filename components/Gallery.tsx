@@ -37,7 +37,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
             gallery
           </h1>
         </div>
-        <Parallax speed={-20}>
+        <Parallax speed={-25}>
           {/* <MilanoWave3 className="w-screen " /> */}
 
           <div className="mt-80 pb-96 ">
@@ -113,7 +113,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
         </Parallax>
       </div>
 
-      <MilanoWave2 className=" relative fill-white -bottom-1 -mt-64 " />
+      <MilanoWave2 className=" relative fill-white -bottom-1 -mt-24 md:-mt-44" />
     </div>
   );
 }

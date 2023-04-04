@@ -18,14 +18,14 @@ function gallery({ galleryItems }: galleryProps) {
   };
 
   return (
-    <div>
+    <div className="">
       {isContactScreenOpen ? (
         <ContactScreen handleClose={toggleContactMenu} />
       ) : (
         <></>
       )}
       <div className="relative min-h-screen">
-        <div className="pb-[100vh]">
+        <div className="pb-[80vh]">
           <Header openContact={toggleContactMenu} />
 
           <Gallery

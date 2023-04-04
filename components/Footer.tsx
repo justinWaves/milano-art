@@ -11,15 +11,15 @@ import MilanoSFVibe from "../public/milano-SF-vibe.png";
 
 // import MilanoFlowerHead from "../public/milano-flower-head.png";
 
-const imageList = [MilanoPeople, MilanoSFVibe];
+const imageList = [MilanoPeople];
 let index = 0;
 
 index = Math.floor(Math.random() * imageList.length);
 
 function Footer({ openContact }: any) {
   return (
-    <div className="-mt-2 absolute bottom-0 h-screen">
-      <div className="w-screen h-fit md:w-5/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-20 mt-40 lg:mt-0">
+    <div className="-mt-2 absolute bottom-0 ">
+      <div className=" h-fit md:w-2/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-25  lg:mt-0">
         <Image src={imageList[index]}></Image>
       </div>
       <FooterWave className="relative -bottom-1" />
@@ -29,20 +29,20 @@ function Footer({ openContact }: any) {
             <div className="p-5 md:p-5 pt-10 flex flex-col md:flex-row justify-between ">
               <div className="flex flex-col ">
                 <Link href="/">
-                  <MilanoText className="fill-slate-200 w-44 mx-auto mb-3 cursor-pointer" />
+                  <MilanoText className="fill-slate-200 hover:fill-red-600 w-44 mx-auto mb-3 cursor-pointer" />
                 </Link>
                 <div className="flex flex-row justify-around mx-auto">
                   <a
                     href="https://www.instagram.com/mattmilanoart/"
                     target="_blank"
                   >
-                    <InstagramIcon className="text-white text-5xl m-1 " />
+                    <InstagramIcon className="text-white text-5xl m-1 hover:text-red-600" />
                   </a>
                   <a
                     href="https://www.facebook.com/profile.php?id=100063465401119"
                     target="_blank"
                   >
-                    <FacebookIcon className="text-white text-5xl m-1 " />
+                    <FacebookIcon className="text-white text-5xl m-1 hover:text-red-600" />
                   </a>
                 </div>
               </div>
@@ -52,10 +52,15 @@ function Footer({ openContact }: any) {
                   {/* <Link href="/">
                     <MilanoText className="fill-slate-200 mb-3" />
                   </Link> */}
-                  <div className="text-slate-300 ">
+                  <div className="text-slate-300 font-thin ">
                     <Link href="/about">
                       <h2 className="hover:text-red-600 cursor-pointer">
                         about
+                      </h2>
+                    </Link>
+                    <Link href="/gallery">
+                      <h2 className="hover:text-red-600 cursor-pointer">
+                        gallery
                       </h2>
                     </Link>
 
@@ -65,6 +70,7 @@ function Footer({ openContact }: any) {
                     >
                       contact
                     </h2>
+
                     <Link href="/privacy-policy">
                       <h2 className="hover:text-red-600 cursor-pointer">
                         Privacy Policy
@@ -83,7 +89,7 @@ function Footer({ openContact }: any) {
                   onClick={() => openContact()}
                 >
                   <MilanoHand className="fill-slate-200 hover:fill-red-600 hover:animate-pulse w-20 ml-5" />
-                  <p className="text-xs text-slate-200 group-hover:text-red-600 text-center ml-3 mt-1">
+                  <p className="text-xs text-slate-200 font-thin group-hover:text-red-600 text-center ml-3 mt-1">
                     reach out
                   </p>
                 </div>
