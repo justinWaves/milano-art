@@ -1,6 +1,5 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 import MilanoHand from "../public/milano-hand.svg";
 
 function About() {
@@ -15,14 +14,27 @@ function About() {
           <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 lg:bg-opacity-0 p-5 rounded-lg h-fit">
             <h1 className="text-4xl">Meet Matt Milano,</h1>
             <p className="mt-3">
-              Its rare today that an artist rises amongst the ranks of the
-              greats. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Matt Milano is San Francisco based artist deep rooted in West
+              Coast culture. Born north of the city, in Greenbrae, California
+              Milano was raised in Novato. Since his formative years, Milano’s
+              creativity was a conduit towards self-realization and personal
+              growth. He continues to promote this ideal by advocating
+              self-healing and mental health support through artistry in hopes
+              to reconnect others to their essential human spirit using the
+              implementation of creation Matt Milano has dedicated his talents
+              to numerous local NPO and Charity Organizations to advocate art as
+              catharsis. He has worked in collaboration with the Louis Merrill
+              Foundation, the Wounded Warriors Foundation, and for benefit
+              functions hosted by Secret Table, offering both live art
+              performance and art donations to support their individual causes.
+              Milano has established himself in the Bay Area community as not
+              just an artist but as a humanitarian. Matt Milano draws
+              inspiration through the observation of collective collaboration
+              within his community. Fueled by the symbiotic relationship of
+              complementary mediums, he is inspired by music and movement. Matt
+              Milano captures intimate moments of individual self-expression and
+              continues to foster his approach by teaching workshop classes out
+              of his San Francisco based gallery The YAWAY Gallery.
             </p>
           </div>
         </ParallaxLayer>
