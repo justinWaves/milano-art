@@ -25,7 +25,7 @@ function gallery({ galleryItems }: galleryProps) {
         <></>
       )}
       <div className="relative min-h-screen">
-        <div className="pb-[80vh]">
+        <div className="pb-[10vh]">
           <Header openContact={toggleContactMenu} />
 
           <Gallery

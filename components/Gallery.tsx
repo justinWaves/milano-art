@@ -40,7 +40,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
         <Parallax speed={-25}>
           {/* <MilanoWave3 className="w-screen " /> */}
 
-          <div className="mt-80 pb-96 ">
+          <div className="mt-80 pb-[40vh] ">
             {/* Map of Gallery Items */}
             {sortedGalleryItems.map((item) => (
               <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20 ">
@@ -113,7 +113,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
         </Parallax>
       </div>
 
-      <MilanoWave2 className=" relative fill-white -bottom-1 -mt-24 md:-mt-44" />
+      {/* <MilanoWave2 className=" relative  -bottom-1 -mt-24 md:-mt-44" /> */}
     </div>
   );
 }

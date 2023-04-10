@@ -35,7 +35,7 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
         <></>
       )}
       <div className="relative min-h-screen">
-        <div className="pb-[100vh]">
+        <div className="pb-[10vh]">
           <Header openContact={toggleContactMenu} />
 
           <LandingSlider mainImage={mainImage} />
