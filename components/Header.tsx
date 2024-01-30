@@ -210,7 +210,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
                 <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
-                  Shop
+                  shop
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
                   `}
