@@ -23,7 +23,8 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
   };
 
   return (
-    <div className="">
+    <div className="relative h-screen">
+      
       <Head>
         <title>Matt Milano Art</title>
         <link rel="icon" href="/favicon.ico" />
@@ -44,12 +45,10 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
             openContact={toggleContactMenu}
           />
         </div>
+      
         <Footer openContact={toggleContactMenu} />
       </div>
-      {/* <FloatingHand
-        onClick={toggleContactMenu}
-        className="fixed bottom-0 right-0"
-      /> */}
+      
     </div>
   );
 };

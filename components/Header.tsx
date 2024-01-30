@@ -103,6 +103,24 @@ function Header({ openContact }: any) {
                 ></span>
               </h3>
             </Link>
+            <a href="https://6127d5-2.myshopify.com/">
+              <h3
+                className={`group transition ease-in-out duration-1000 cursor-pointer  font-thin text-lg   bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
+                  show
+                    ? "text-slate-200 bg-opacity-50"
+                    : "text-slate-900 bg-opacity-0"
+                }`}
+              >
+                Shop
+                <span
+                  className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] ${
+                    show ? "bg-slate-200 " : "bg-slate-900 "
+                  }`}
+                ></span>
+              </h3>
+            </a>
+
+
 
             <div onClick={() => openContact()}>
               <h3
@@ -188,6 +206,18 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
                 </h1>
               </div>
             </Link>
+            <a href="https://6127d5-2.myshopify.com/">
+              <div className="flex flex-row group" onClick={toggleMenu}>
+                <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
+                  Shop
+                  <span
+                    className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
+                  `}
+                  ></span>
+                </h1>
+              </div>
+              </a>
 
             <div
               className="flex flex-row group"

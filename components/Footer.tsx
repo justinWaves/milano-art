@@ -18,11 +18,12 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer({ openContact }: any) {
   return (
-    <div className="-mt-2 absolute bottom-0 ">
+    <div className="-mt-2 absolute bottom-0 h-[200px]
+     w-screen ">
       {/* <div className=" h-fit md:w-2/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-25  lg:mt-0">
         <Image src={imageList[index]}></Image>
       </div> */}
-      <FooterWave className="relative -bottom-1" />
+      {/* <FooterWave className="relative -bottom-1" /> */}
       <div className=" flex flex-col w-screen relative bottom-0">
         <div>
           <div className=" bg-black flex flex-col">
@@ -63,6 +64,9 @@ function Footer({ openContact }: any) {
                         gallery
                       </h2>
                     </Link>
+                    <a href="https://6127d5-2.myshopify.com/"> <h2 className="hover:text-red-600 cursor-pointer">
+                        shop
+                      </h2></a>
 
                     <h2
                       className="hover:text-red-600 cursor-pointer"
