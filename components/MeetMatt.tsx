@@ -11,9 +11,9 @@ function About() {
           speed={1}
           className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
-          <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6 md:w-1/2 bg-slate-800 bg-opacity-50 lg:bg-opacity-0 p-5 rounded-lg h-fit">
-            <h1 className="text-4xl">Meet Matt Milano,</h1>
-            <p className="mt-3">
+          <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6  bg-slate-800 backdrop-blur-md bg-opacity-50 px-5 py-10 pt-20  rounded-lg shadow-md ">
+            <h1 className="text-4xl md:text-7xl font-bold text-center">Meet Matt Milano</h1>
+            <p className="mt-5">
               Matt Milano is San Francisco based artist deep rooted in West
               Coast culture. Born north of the city, in Greenbrae, California
               Milano was raised in Novato. Since his formative years, Milano’s

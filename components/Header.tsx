@@ -48,9 +48,9 @@ function Header({ openContact }: any) {
       <header
         className={`transition ease-in-out duration-1000 flex justify-between fixed px-2 md:rounded-b-md
  p-2  mx-auto max-w-7xl  w-screen z-10 left-0 right-0 border-b  ${
-   show ? "bg-black" : "bg-white"
+   show ? "bg-black" : "bg-slate-200 "
  } ${
-          show && " bg-filter backdrop-blur-sm bg-opacity-60  "
+          show && " backdrop-blur-md bg-opacity-60  "
         } border-slate-400 border-opacity-5`}
       >
         <div
