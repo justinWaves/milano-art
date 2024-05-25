@@ -75,7 +75,7 @@ function Footer({ openContact }: any) {
                       contact
                     </h2>
 
-                    <Link href="/privacy-policy">
+                    {/* <Link href="/privacy-policy">
                       <h2 className="hover:text-red-600 cursor-pointer">
                         Privacy Policy
                       </h2>
@@ -84,7 +84,7 @@ function Footer({ openContact }: any) {
                       <h2 className="hover:text-red-600 cursor-pointer">
                         Terms of Service
                       </h2>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
