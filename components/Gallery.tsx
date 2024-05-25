@@ -33,7 +33,7 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
       <div className=" w-screen bg-[url('/lightlang-bkgd.svg')] bg-fill bg-repeat-y bg-center scroll-smooth">
         <div className="bg-black bg-opacity-100 w-fit rounded-bl-3xl rounded-br-3xl mx-auto bg-filter backdrop-blur-lg px-10    ">
           <h1 className="text-7xl lg:text-9xl font-semibold text-slate-200  text-center pt-20 pb-7   ">
-            gallery
+            Gallery
           </h1>
         </div>
         <Parallax speed={-25}>

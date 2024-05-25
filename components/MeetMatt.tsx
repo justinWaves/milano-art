@@ -12,29 +12,33 @@ function About() {
           className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
         >
           <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6  bg-slate-800 backdrop-blur-md bg-opacity-50 px-5 py-10 pt-20  rounded-lg shadow-md ">
-            <h1 className="text-4xl md:text-7xl font-bold text-center">Meet Matt Milano</h1>
+            <h1 className="text-4xl md:text-7xl font-bold text-center">
+              Meet Matt Milano
+            </h1>
             <p className="mt-5">
-              Matt Milano is San Francisco based artist deep rooted in West
-              Coast culture. Born north of the city, in Greenbrae, California
-              Milano was raised in Novato. Since his formative years, Milano’s
-              creativity was a conduit towards self-realization and personal
-              growth. He continues to promote this ideal by advocating
-              self-healing and mental health support through artistry in hopes
-              to reconnect others to their essential human spirit using the
-              implementation of creation Matt Milano has dedicated his talents
-              to numerous local NPO and Charity Organizations to advocate art as
-              catharsis. He has worked in collaboration with the Louis Merrill
-              Foundation, the Wounded Warriors Foundation, and for benefit
-              functions hosted by Secret Table, offering both live art
-              performance and art donations to support their individual causes.
-              Milano has established himself in the Bay Area community as not
-              just an artist but as a humanitarian. Matt Milano draws
-              inspiration through the observation of collective collaboration
-              within his community. Fueled by the symbiotic relationship of
-              complementary mediums, he is inspired by music and movement. Matt
-              Milano captures intimate moments of individual self-expression and
-              continues to foster his approach by teaching workshop classes out
-              of his San Francisco based gallery The YAWAY Gallery.
+              Matt Milano is a San Francisco-based artist deeply rooted in West
+              Coast culture. Born in Greenbrae, California, and raised in
+              Novato, Milano's creativity has always been a conduit for
+              self-realization and personal growth. He continues to promote
+              these ideals by advocating for self-healing and mental health
+              support through artistry, aiming to reconnect others to their
+              essential human spirit through the power of creation. <br />
+              <br />
+              Matt Milano has dedicated his talents to numerous local non-profit
+              and charity organizations, advocating for art as a form of
+              catharsis. He has collaborated with the Louis Merrill Foundation,
+              the Wounded Warriors Foundation, and participated in benefit
+              events hosted by Secret Table, offering live art performances and
+              art donations to support their individual causes.
+              <br />
+              <br /> In the Bay Area community, Milano is recognized not just as
+              an artist but as a humanitarian. He draws inspiration from the
+              collective collaboration within his community, fueled by the
+              symbiotic relationship of complementary mediums, including music
+              and movement. Matt Milano captures intimate moments of individual
+              self-expression and continues to foster this approach by teaching
+              workshop classes at his San Francisco-based gallery, The YAWAY
+              Gallery.
             </p>
           </div>
         </ParallaxLayer>
@@ -97,6 +101,7 @@ function About() {
         >
           <div className="absolute bottom-10 text-2xl animate-bounce z-2">
             <MilanoHand className="w-10 animate-pulse fill-slate-700 " />
+
           </div>
         </ParallaxLayer>
         <ParallaxLayer
