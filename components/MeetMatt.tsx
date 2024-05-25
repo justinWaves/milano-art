@@ -84,10 +84,10 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="absolute w-[300px] -top-[300px] right-10 z-0  ">
+          <div className="absolute w-[300px] bottom-[500px] right-10 z-0  ">
             <img
               src={"/matt-painting_4.jpg"}
-              className="top-96 lg:top-0  relative  "
+              className=" "
             />
           </div>
         </ParallaxLayer>
