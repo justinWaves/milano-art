@@ -24,12 +24,6 @@ function Header({ openContact }: any) {
     return () => window.removeEventListener("scroll", transitionNavBar);
   }, []);
 
-  // if (show) {
-  //   setTimeout(() => {
-  //     handleShow(false);
-  //   }, 500);
-  // }
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -120,8 +114,6 @@ function Header({ openContact }: any) {
               </h3>
             </a>
 
-
-
             <div onClick={() => openContact()}>
               <h3
                 className={`group transition ease-in-out duration-1000 cursor-pointer   font-thin text-lg bg-opacity-50 hover:bg-opacity-30 py-1 rounded-full px-4 ${
@@ -172,11 +164,11 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
           </button>
           <div className="mx-auto my-auto">
             <Link href="/">
-              <div className="flex flex-row group" onClick={toggleMenu}>
-                <MilanoHand className="w-10 fill-slate-900 invisible " />
+              <div className="flex flex-row group justify-center mb-10" onClick={toggleMenu}>
+
 
                 <div className="relative group cursor-pointer">
-                  <MilanoHand className="w-1/2 fill-slate-200  cursor-pointer pl-2 group-hover:fill-sky-300 transition-all duration-1000 z-10" />
+                  <MilanoHand className="w-20  fill-slate-200  cursor-pointer pl-2 group-hover:fill-sky-300 transition-all duration-1000 z-10" />
                   <div className="bg-sky-300 bg-opacity-30 absolute z-0 w-44 h-44 bottom-2 -left-2 rounded-full invisible group-hover:visible animate-ping"></div>
                 </div>
               </div>
@@ -185,7 +177,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
             <Link href="/about">
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
+                <h1 className="text-5xl text-slate-200 font-thin  cursor-pointer pl-2 group">
                   about
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -197,7 +189,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
             <Link href="/gallery">
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
+                <h1 className="text-5xl text-slate-200 font-thin  cursor-pointer pl-2 group">
                   gallery
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -209,7 +201,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
             <a href="https://6127d5-2.myshopify.com/">
               <div className="flex flex-row group" onClick={toggleMenu}>
                 <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                <h1 className="text-6xl text-slate-200 font-thin  cursor-pointer pl-2 group">
+                <h1 className="text-5xl text-slate-200 font-thin  cursor-pointer pl-2 group">
                   shop
                   <span
                     className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -217,7 +209,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
                   ></span>
                 </h1>
               </div>
-              </a>
+            </a>
 
             <div
               className="flex flex-row group"
@@ -227,7 +219,7 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
               }}
             >
               <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-              <h1 className="text-6xl text-slate-200 font-thin cursor-pointer pl-2 group">
+              <h1 className="text-5xl text-slate-200 font-thin cursor-pointer pl-2 group">
                 contact
                 <span
                   className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
@@ -235,16 +227,16 @@ p-3  mx-auto  bg-black h-screen w-screen first-letter z-10  bg-filter backdrop-b
                 ></span>
               </h1>
             </div>
-            <div className="flex flex-row group">
+            {/* <div className="flex flex-row group">
               <MilanoHand className="w-10 fill-sky-200 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-              <h1 className="text-6xl text-slate-200 font-thin   cursor-pointer pl-2">
+              <h1 className="text-5xl text-slate-200 font-thin   cursor-pointer pl-2">
                 community
                 <span
                   className={` block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] mt-2 bg-slate-200 
                   `}
                 ></span>
               </h1>
-            </div>
+            </div> */}
           </div>
         </animated.div>
       ) : (
