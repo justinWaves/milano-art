@@ -7,8 +7,6 @@ import LandingSlider from "../components/LandingSlider";
 import { GalleryItem, MainPageImage } from "../typings";
 import ContactScreen from "../components/ContactScreen";
 import { useState } from "react";
-import HandButton from "../components/HandButton";
-import FloatingHand from "../components/FloatingHand";
 
 interface GalleryProps {
   galleryItems: [GalleryItem];
@@ -36,7 +34,7 @@ const Home = ({ galleryItems, mainImage }: GalleryProps) => {
         <></>
       )}
       <div className="relative min-h-screen">
-        <div className="pb-[10vh]">
+        <div className="">
           <Header openContact={toggleContactMenu} />
 
           <LandingSlider mainImage={mainImage} />

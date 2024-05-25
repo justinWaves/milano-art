@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import MilanoHand from "../public/milano-hand.svg";
+import Footer from "./Footer";
 
 function About() {
   return (
@@ -9,12 +10,13 @@ function About() {
         <ParallaxLayer
           offset={1}
           speed={1}
-          className="bg-black bg-[url('/matt-bg.jpg')] bg-center bg-cover  w-screen text-white flex justify-center"
+          className=" bg-[url('/matt-painting_4.jpg')] overflow-scroll bg-center bg-cover  mt-[60px]  w-screen text-slate-100 flex justify-center"
         >
-          <div className=" my-auto md:absolute md:bottom-20 mx-auto md:left-20 w-5/6  bg-slate-800 backdrop-blur-md bg-opacity-50 px-5 py-10 pt-20  rounded-lg shadow-md ">
-            <h1 className="text-4xl md:text-7xl font-bold text-center">
+          <div className=" my-auto bg-black bg-opacity-30 backdrop-blur-md  px-5 pb-40 py-10 pt-20 w-[900px] rounded-lg shadow-md ">
+            {/* <h1 className="text-4xl md:text-7xl font-bold text-center">
               Meet Matt Milano
-            </h1>
+            </h1> */}
+            <img src="/milano-flower-head.png" className="h-[300px] mx-auto" />
             <p className="mt-5">
               Matt Milano is a San Francisco-based artist deeply rooted in West
               Coast culture. Born in Greenbrae, California, and raised in
@@ -53,11 +55,11 @@ function About() {
         >
           <div className="flex flex-col h-screen w-screen justify-center">
             <div className="mx-auto my-auto z-0 relative">
-              <img src={"/matt-painting_1.jpg"} className="" />
+              <img src={"/matt-painting_3.jpg"} className="" />
             </div>
           </div>
         </ParallaxLayer>
-        {/* 
+        
         <ParallaxLayer
           offset={0}
           speed={3.5}
@@ -65,14 +67,14 @@ function About() {
             position: "relative",
           }}
         >
-          <div className="absolute -bottom-80 lg:-bottom-80 left-10 z-0 ">
+          <div className="absolute top-[500px] left-10 z-0 ">
             <img
-              src={"/matt-painting_3.jpg"}
+              src={"/matt-painting_1.jpg"}
               className="w-1/2 relative top-20"
             />
           </div>
-        </ParallaxLayer> */}
-        {/* 
+        </ParallaxLayer>
+        
         <ParallaxLayer
           offset={0}
           speed={4.5}
@@ -82,13 +84,13 @@ function About() {
             alignItems: "center",
           }}
         >
-          <div className="absolute -bottom-96 lg:-bottom-96 right-10 z-0 w-1/2 ">
+          <div className="absolute w-[300px] -top-[300px] right-10 z-0  ">
             <img
               src={"/matt-painting_4.jpg"}
               className="top-96 lg:top-0  relative  "
             />
           </div>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0}
@@ -100,7 +102,8 @@ function About() {
           }}
         >
           <div className="absolute bottom-10 text-2xl animate-bounce z-2">
-            <MilanoHand className="w-10 animate-pulse fill-slate-700 " />
+            <MilanoHand className="w-10 animate-pulse fill-slate-100 mx-auto" />
+            <p className="text-xs text-white mt-2 ">scroll to learn more</p>
 
           </div>
         </ParallaxLayer>
@@ -114,12 +117,14 @@ function About() {
           }}
         >
           <div className="mx-auto my-auto z-3 relative">
-            <h1 className="text-6xl relative  text-white bg-black p-2  px-20 rounded-3xl bg-opacity-60 backdrop-blur-md">
-              Meet Matt Milano
-            </h1>
+             <div className="text-2xl relative  text-black text-center p-2 font-light  px-20 rounded-3xl  bg-white bg-opacity-80 backdrop-blur-md">
+            {/* <p className="mx-auto">Made</p> */}
+            <img src="milano-SF-vibe.png" className="w-[200px]" />
+            </div> 
           </div>
         </ParallaxLayer>
       </Parallax>
+      {/* <Footer /> */}
     </div>
   );
 }

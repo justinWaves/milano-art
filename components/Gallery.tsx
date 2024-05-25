@@ -39,10 +39,10 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
         <Parallax speed={-25}>
           {/* <MilanoWave3 className="w-screen " /> */}
 
-          <div className="pt-56 md:pt-96 pb-[40vh] ">
+          <div className="pt-[300px] md:pt-96 pb-[550px] ">
             {/* Map of Gallery Items */}
             {sortedGalleryItems.map((item) => (
-              <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-20">
+              <div className="flex flex-col z-4 lg:flex-col mx-auto  lg:mx-5 mt-10 mb-[200px]">
                 <div className="relative w-5/6  mx-auto z-1 lg:w-5/6 border-t md:border-b backdrop-blur-lg text-white bg-opacity-30 shadow-lg flex flex-col lg:flex-row  p-5 justify-center rounded-tr-2xl rounded-tl-2xl lg:rounded-2xl">
                   {/* Image desktop*/}
                   <div className="w-screen lg:w-1/2 hidden lg:flex lg:justify-between lg:flex-col md:relative xl:-top-20 md:top-1/2 z-2 ">

@@ -18,17 +18,17 @@ index = Math.floor(Math.random() * imageList.length);
 
 function Footer({ openContact }: any) {
   return (
-    <div className="-mt-2 absolute bottom-0 h-[200px]
+    <div className=" absolute bottom-0
      w-screen ">
       {/* <div className=" h-fit md:w-2/6 lg:w-3/5 xl:w-1/2 mx-auto p-10 md:p-0 bg-white relative top-25  lg:mt-0">
         <Image src={imageList[index]}></Image>
       </div> */}
       {/* <FooterWave className="relative -bottom-1" /> */}
-      <div className=" flex flex-col w-screen relative bottom-0">
+      <div className=" flex flex-col w-screen relative bottom-0 ">
         <div>
-          <div className=" bg-black flex flex-col">
+          <div className="  flex flex-col">
             <div className="p-5 md:p-5 pt-10 flex flex-col md:flex-row justify-between ">
-              <div className="flex flex-col ">
+              <div className="flex flex-col  p-2 rounded-lg ">
                 <Link href="/">
                   <MilanoText className="fill-slate-200 hover:fill-red-600 w-44 mx-auto mb-3 cursor-pointer" />
                 </Link>
