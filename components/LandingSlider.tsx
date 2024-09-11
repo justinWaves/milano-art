@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import matt3 from "../public/milano-tyson.png";
 import { MainPageImage } from "../typings";
+import MilanoHand from "../public/milano-hand.svg";
 import { urlFor } from "../sanity";
 
 function LandingSlider({ mainImage }: any) {
@@ -12,6 +13,12 @@ function LandingSlider({ mainImage }: any) {
           src={urlFor(mainImage[0].mainImage).url()!}
           className=" shadow-lg"
         />
+      </div>
+      <div className="relative top-36 mx-auto left-0 right-0 first-line: animation animate-bounce">
+        <MilanoHand className="fill-slate-300 w-10 mx-auto" />
+        <p className="text-gray-400 text-center text-nowrap text-xs font-thin">
+          enter gallery
+        </p>
       </div>
     </div>
   );
