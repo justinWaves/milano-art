@@ -14,7 +14,7 @@ function LandingSlider({ mainImage }: any) {
           className=" shadow-lg"
         />
       </div>
-      <div className="relative top-36 mx-auto left-0 right-0 first-line: animation animate-bounce">
+      <div className="relative top-16 md:top-36 mx-auto left-0 right-0 first-line: animation animate-bounce">
         <MilanoHand className="fill-slate-300 w-10 mx-auto" />
         <p className="text-gray-400 text-center text-nowrap text-xs font-thin">
           enter gallery
