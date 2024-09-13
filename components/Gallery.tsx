@@ -58,31 +58,33 @@ function Gallery({ galleryItems, openContact }: GalleryProps) {
                       />
                     </div>
                     <div className="mt-5 overflow-hidden px-5">
-                      <PortableText
-                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                        content={item.body}
-                        serializers={{
-                          h1: (props: any) => (
-                            <h1 className="my-5 text-2xl font-bold" {...props} />
-                          ),
-                          h2: (props: any) => (
-                            <h1 className="my-5 text-xl font-bold" {...props} />
-                          ),
-                          li: ({ children }: any) => (
-                            <li className="ml-4 list-disc">{children}</li>
-                          ),
-                          link: ({ href, children }: any) => (
-                            <a
-                              href={href}
-                              className="text-blue-500 hover:underline"
-                            >
-                              {children}
-                            </a>
-                          ),
-                        }}
-                      />
-                    </div>
+  {item?.body ? (
+    <PortableText
+      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+      content={item.body}
+      serializers={{
+        h1: (props: any) => (
+          <h1 className="my-5 text-2xl font-bold" {...props} />
+        ),
+        h2: (props: any) => (
+          <h1 className="my-5 text-xl font-bold" {...props} />
+        ),
+        li: ({ children }: any) => (
+          <li className="ml-4 list-disc">{children}</li>
+        ),
+        link: ({ href, children }: any) => (
+          <a href={href} className="text-blue-500 hover:underline">
+            {children}
+          </a>
+        ),
+      }}
+    />
+  ) : (
+    <p className="text-slate-500">No Description</p>
+  )}
+</div>
+
                   </div>
                 </div>
 
