@@ -60,22 +60,12 @@ function ContactScreen({ handleClose }: any) {
         <CloseIcon fontSize="large" />
       </button>
       <div className="flex flex-col justify-center text-center h-screen">
-        {/* <MilanoText className="fill-slate-100 pt-5 mb-5 md:pt-5 w-[300px]  mx-auto" /> */}
-        {/* <div className="flex flex-row justify-around mx-auto ">
-          <a href="https://www.instagram.com/mattmilanoart/" target="_blank">
-            <InstagramIcon className="text-slate-300 text-6xl m-2 " />
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=100063465401119" target="_blank">
-            <FacebookIcon className="text-slate-300 text-6xl m-2 " />
-          </a>
-        </div> */}
         <div className="grid place-content-center space-y-3 m-3 md:m-10 mb-10">
           <p className="text-slate-400 textlgl animate-pulse">
             Live Paintings, commissions, other questions...
           </p>
           <form onSubmit={handleSubmit} className='space-y-2 pb-10'>
             <div className="flex flex-row text-white text-3xl">
-              {/* <AccountCircleIcon className="fill-white text-4xl h-8" /> */}
               <input
                 type="text"
                 name="name"
