@@ -45,6 +45,7 @@ function ContactScreen({ handleClose }: any) {
         userID
       );
       alert('Email sent successfully');
+      handleClose();
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Error sending email');
